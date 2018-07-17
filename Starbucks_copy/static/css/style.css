@@ -1,0 +1,58 @@
+body{
+	font-family: "微软雅黑";
+}
+.drink1{
+	height: 3150px;
+	padding: 10px 24px;
+	background-color:#F7F7F7;
+}
+h3{
+	font-weight: 700;
+	color:rgba(0, 0, 0, 0.56);
+	font-size: 14px;
+}
+
+ul > *{
+	height: 219px;
+	float: left;
+	padding-top: 10px;
+}
+li{
+	height: 229px;
+	list-style-type: none; 
+	transition: all 0.2s;
+}
+li:hover{
+	padding-top: 0px;
+}
+li:hover .circle{
+	box-shadow: 0 0 10px #E0E0E0;
+}
+a,a:hover{
+	width: 218px;
+	text-decoration: none;
+	background: none;
+	color: inherit;
+}
+strong{
+	font-weight: 700;
+	margin-top: 14px;
+	display: block;
+	text-align: center;
+	width: 150px;
+}
+hr{
+	clear: both;
+	margin-top: 50px;
+	background: rgba(0, 0, 0, 0.12);
+    border: 0;
+    height: 1px;
+	height: 1px;
+}
+.circle{
+	width: 150px;
+	height: 150px;
+	border: 1px solid #E0E0E0;
+	border-radius: 50%;
+	cursor: pointer;
+}

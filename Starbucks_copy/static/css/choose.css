@@ -1,0 +1,192 @@
+.first {
+    height: auto;
+    width: 100%;
+    margin-top: 60px;
+}
+
+.image {
+    background: url("../img/hero.jpg") no-repeat;
+    height: 400px;
+    width: 100%;
+    background-position: 50% 50%;
+    background-size: cover;
+    top: 0;
+    position: relative;
+}
+
+.first .image:before {
+    background-image: linear-gradient(-180deg, rgba(0, 0, 0, 0.35) 0%, rgba(0, 0, 0, 0.7) 81%);
+    content: '';
+    width: 1140px;
+    height: 400px;
+    position: absolute;
+}
+
+.image-font {
+    margin: 120px;
+    position: absolute;
+    padding: 0 300px;
+    top: 0;
+    text-align: center;
+}
+
+.image-font-img {
+    height: 89px;
+    width: 72px;
+}
+
+.image-font-h2 {
+    color: #C48D69;
+    font-weight: bold;
+}
+
+.seelist-wrapper {
+    background: url(../img/map.jpg);
+    background-position: 50% 50%;
+    background-size: cover;
+    padding: 48px 0;
+    padding-left: 300px;
+    padding-right: 300px;
+}
+
+.center {
+    text-align: center;
+}
+
+.seelist-font {
+    font-size: 18px;
+}
+
+.button.large {
+    font-weight: 700;
+    padding: 12px 24px;
+}
+
+.button.reserve {
+    background: #C48D69;
+    border-color: #C48D69;
+    color: #FFF;
+}
+
+.button {
+    background: none;
+    border: 1px solid #00A862;
+    border-radius: 48px;
+    box-sizing: border-box;
+    color: #00A862;
+    display: inline-block;
+    outline: none;
+    overflow: hidden;
+    padding: 6px 18px;
+    position: relative;
+}
+
+.new {
+    height: 425px;
+    width: 100%;
+    padding-top: 30px;
+    background: #231F20;
+}
+
+.new-content {
+    padding: 0 100px;
+}
+
+.new-caption {
+    color: #C48D69;
+}
+
+.new-title {
+    color: #C48D69;
+    margin-bottom: 48px;
+}
+
+.new .new-item li {
+    box-sizing: border-box;
+    margin-right: -4px;
+    display: inline-block;
+    padding: 18px;
+    vertical-align: top;
+    width: 25%;
+}
+.new .new-item li :hover{
+    opacity: 0.5;
+}
+
+.preview {
+    background: url("../img/reserve-papua-new-guinea-luoka.jpg");
+    height: 150px;
+    width: 150px;
+
+}
+
+.circle {
+    border-radius: 50%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+}
+
+.circle:before {
+    content: '';
+    display: block;
+    padding-top: 100%;
+}
+
+.new-item strong {
+    color: white;
+    font-size: 18px;
+}
+
+.footer-img {
+    width: 1140px;
+    height: 300px;
+}
+
+.footer {
+    position: relative;
+}
+
+.intro-content > * {
+    padding: 12px;
+}
+
+.intro {
+    height: 360px;
+    padding: 0 100px;
+}
+
+.intro-content img {
+    width: 400px;
+    height: 300px;
+}
+
+.intro-content-left {
+    width: 50%;
+    float: left;
+}
+
+.intro-content-font {
+    font-size: 16px;
+    width: 50%;
+    float: left;
+    padding: 20px 50px;
+
+}
+
+.intro-content-title {
+    text-align: left;
+    padding: 10px 0;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.reserve-logo {
+    position: absolute;
+    bottom: 15%;
+    left: 5%;
+    max-width: 288px;
+    margin: 0 12px;
+    width: 40%;
+}

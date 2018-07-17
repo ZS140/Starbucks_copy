@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="Zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <title>关于星巴克臻选™ | 星巴克</title>
+    <link rel="icon" type="image/png" href="/static/img/favicon-16x16.png" sizes="16x16">
+    <script src="/static/js/jquery.min.js"></script>
+    <link rel="stylesheet" href="/static/css/index.css">
+    <link href="/static/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/static/css/head.css" rel="stylesheet">
+    <link href="/static/css/choose.css" rel="stylesheet">
+    <script src="/static/js/bootstrap.min.js"></script>
+    <script src="/static/js/style.js"></script>
+</head>
+<body>
+{#回到顶部#}
+<a href="#" onclick="pageScroll()" id="to-top-btn"></a>
+<!--导航条-->
+<div class="head-all">
+    <div class="container">
+        <div class="head">
+            <div class="head-left"><a href="#"><img src="/static/img/logo.png" alt="logo"/></a></div>
+            <span class="head-left-font">Starbucks</span>
+            <div class="nav">
+                <ul class="nav-main">
+                    <li><a href="{{ url_for("index") }}">首页</a></li>
+                    <li id="li-1"><a href="{{ url_for("select") }}">菜单</a><span></span></li>
+                    <li><a href="{{ url_for("choose") }}" style="color: #4cae4c">关于星巴克臻选™</a><span></span></li>
+                    <li id="li-2"><a href="{{ url_for("apps_intro1") }}">星巴克移动应用</a><span></span></li>
+                    <li id="li-3"><a href="{{ url_for("starbucks_in_china") }}">关于星巴克</a><span></span></li>
+                </ul>
+                <a style="float: right;font-size: 13px;color: #4cae4c "
+                   href="{{ url_for("login") }}">你好，{{ current_user.username }}</a>
+                <!--隐藏盒子-->
+                <div class="box">
+                    <div id="box-1" class="hidden-box hidden-loc-menu">
+                        <ul>
+                            <li><a href="{{ url_for("select") }}">季度精选</a></li>
+                            <li><a href="{{ url_for("drink") }}">饮料</a></li>
+                            <li><a href="{{ url_for("coffee") }}">冰咖啡</a></li>
+                        </ul>
+                    </div>
+                    <div id="box-2" class="hidden-box hidden-loc-phone">
+                        <ul>
+                            <li><a href="{{ url_for("apps_intro1") }}">移动应用</a></li>
+                            <li><a href="{{ url_for("apps_intro") }}">Apple Watch</a></li>
+                        </ul>
+                    </div>
+                    <div id="box-3" class="hidden-box hidden-loc-about">
+                        <ul>
+                            <li><a href="{{ url_for("job_offer") }}">工作机会</a></li>
+                            <li><a href="{{ url_for("enterprise_news") }}">企业新闻</a></li>
+                            <li><a href="{{ url_for("starbucks_in_china") }}">星巴克在中国</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+    </div>
+</div>
+{#内容#}
+<div class="container">
+    <section class="first">
+        <div class="image">
+            <div class="image-font">
+                <img src="/static/img/reserve-logo-s.png" class="image-font-img">
+                <h2 class="image-font-h2">代表我们更高品质的<br>星巴克臻选™咖啡</h2>
+            </div>
+        </div>
+    </section>
+    <section class="seelist">
+        <div class="seelist-wrapper center">
+            <p class="seelist-font">我们走访世界各地搜罗品质出众的咖啡豆，当中只有少量珍贵而独特风味的 品种，才会被冠以星巴克臻选™的称号。 它们不可多得，且拥有让人着迷的风味。
+                这些臻选™咖啡豆只在指定星巴克门店限量供应。
+            </p><a id="reserve-view-stores" href="#" class="button reserve large">查看星巴克臻选™咖啡门店</a>
+        </div>
+    </section>
+    <section class="new">
+        <div class="new-content">
+            <div class="new-caption center">限量供应</div>
+            <h2 class="new-title center">最新星巴克臻选™咖啡</h2>
+            <ul class="new-item">
+                <li>
+                    <div class="preview circle"></div>
+                    <strong>星巴克臻选™ 苏门答腊葛林芝咖啡豆</strong>
+                </li>
+                <li>
+                    <div class="preview circle"></div>
+                    <strong>星巴克臻选™ 卢旺达淑利咖啡豆</strong>
+                </li>
+                <li>
+                    <div class="preview circle"></div>
+                    <strong>星巴克臻选™ 巴布亚新几内亚洛卡咖啡豆</strong>
+                </li>
+                <li>
+                    <div class="preview circle"></div>
+                    <strong>星巴克臻选™ 牙买加蓝山咖啡豆</strong>
+                </li>
+
+            </ul>
+        </div>
+    </section>
+    <div class="footer"><img src="/static/img/bg-pattern-1.jpg" class="footer-img"></div>
+    <h2 class="center">什么是星巴克臻选™咖啡</h2>
+    <section class="intro">
+        <div class="intro-content">
+            <div class="intro-content-title"></div>
+            <div class="intro-content-left"><img src="/static/img/article-1.jpg"></div>
+            <div class="intro-content-font">
+                每年，我们的伙伴环游世界，只为找到上乘的咖啡。每隔一段时间，我们都会找到一款珍贵而独特的咖啡豆，并且迫不及待地想将他们带回来和大家分享。我们在支持中心的采购部门以及农业学家们一直致力于帮助全世界的咖啡种植者们，通过与他们合作，我们希望获得发现不同寻常并且独特的咖啡种类的机会。而在我们的品鉴部门，我们的专业品鉴师每年会品尝超过25万杯咖啡，然后再从中选取稀有而独特的几个种类来制作星巴克臻选™咖啡。
+            </div>
+        </div>
+    </section>
+    <section class="intro">
+        <div class="intro-content">
+            <div class="intro-content-font">
+                <div class="intro-content-title">风土条件</div>
+                咖啡的生长，就如同酿酒的葡萄，受到不同产区的具体生长环境的影响，形成了大部分的风味。咖啡生长地区的土地，气温，海拔，降雨量和阳光等众多可变因素赋予了咖啡一系列特殊的个性，呈现出一杯美味的咖啡。
+            </div>
+            <div class="intro-content-left"><img src="/static/img/article-2.jpg"></div>
+        </div>
+    </section>
+    <section class="intro">
+        <div class="intro-content">
+            <div class="intro-content-left"><img src="/static/img/article-3.png"></div>
+            <div class="intro-content-font">
+                <div class="intro-content-title">咖啡品种</div>
+                咖啡品种有着悠久的历史，可以创造出一杯珍贵稀有的咖啡。最常见的四种阿拉比卡咖啡的变种为波旁，铁毕卡，卡杜拉和卡杜艾。波旁和铁毕卡是原生种咖啡豆，是所有咖啡树的原型。卡杜拉和卡杜艾是波旁混合种的后代，混合了（通过自然混合或人工方法）两种现有咖啡的变种后得到，创造出一杯崭新的咖啡。
+            </div>
+        </div>
+    </section>
+    <section class="intro">
+        <div class="intro-content">
+            <div class="intro-content-font">
+                <div class="intro-content-title">人文故事</div>
+                每一款星巴克臻选™咖啡的背后都讲述了一个关于家庭，种植农和社区的故事。这些人文故事带给我们的是星巴克臻选™体验中不可或缺的一部分。
+            </div>
+            <div class="intro-content-left"><img src="/static/img/article-4.jpg"></div>
+        </div>
+    </section>
+    <section class="footer">
+        <img src="/static/img/bg-pattern-2.jpg" class="footer-img">
+        <img src="/static/img/reserve-logo.png" class="reserve-logo">
+    </section>
+</div>
+</body>
+</html>

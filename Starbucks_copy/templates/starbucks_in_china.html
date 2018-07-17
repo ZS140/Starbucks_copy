@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>星巴克在中国 | 星巴克</title>
+    <link rel="icon" type="image/png" href="/static/img/favicon-16x16.png" sizes="16x16">
+    <link rel="stylesheet" href="/static/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="/static/css/starbucks_in_china.css"/>
+    <link href="/static/css/head.css" rel="stylesheet">
+    <script src="/static/js/jquery.min.js"></script>
+    <script type="text/javascript" src="/static/js/bootstrap.min.js"></script>
+    <script src="/static/js/style.js"></script>
+</head>
+<body>
+<a href="#" onclick="pageScroll()" id="to-top-btn"></a>
+<div class="head-all">
+    <div class="container">
+        <div class="head">
+            <div class="head-left"><a href="#"><img src="/static/img/logo.png" alt="logo"/></a></div>
+            <span class="head-left-font">Starbucks</span>
+            <div class="nav">
+                <!--导航条-->
+                <ul class="nav-main">
+                    <li><a href="{{ url_for("index") }}">首页</a></li>
+                    <li id="li-1"><a href="{{ url_for("select") }}">菜单</a><span></span></li>
+                    <li><a href="{{ url_for("choose") }}">关于星巴克臻选™</a><span></span></li>
+                    <li id="li-2"><a href="{{ url_for("apps_intro1") }}">星巴克移动应用</a><span></span></li>
+                    <li id="li-3"><a href="{{ url_for("starbucks_in_china") }}"
+                                     style="color: #4cae4c">关于星巴克</a><span></span></li>
+                </ul>
+                <a style="float: right;font-size: 13px;color: #4cae4c "href="{{ url_for("login") }}">你好，{{ current_user.username }}</a>
+                <!--隐藏盒子-->
+                <div class="box">
+                    <div id="box-1" class="hidden-box hidden-loc-menu">
+                        <ul>
+                            <li><a href="{{ url_for("select") }}">季度精选</a></li>
+                            <li><a href="{{ url_for("drink") }}">饮料</a></li>
+                            <li><a href="{{ url_for("coffee") }}">冰咖啡</a></li>
+                        </ul>
+                    </div>
+                    <div id="box-2" class="hidden-box hidden-loc-phone">
+                        <ul>
+                            <li><a href="{{ url_for("apps_intro1") }}">移动应用</a></li>
+                            <li><a href="{{ url_for("apps_intro") }}">Apple Watch</a></li>
+                        </ul>
+                    </div>
+                    <div id="box-3" class="hidden-box hidden-loc-about">
+                        <ul>
+                            <li><a href="{{ url_for("job_offer") }}">工作机会</a></li>
+                            <li><a href="{{ url_for("enterprise_news") }}">企业新闻</a></li>
+                            <li><a href="{{ url_for("starbucks_in_china") }}">星巴克在中国</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <!--头部-->
+    <section id="content">
+        <div class="header">
+            <div class="header-image header-background">
+                <h1 class="header-title">
+                    星巴克在中国
+                </h1>
+                <p class="header-text">我们希望通过每一杯咖啡，将星巴克的咖啡传承与独特的咖啡体验带给我们的顾客。</p>
+            </div>
+        </div>
+
+        <!--中间的介绍-->
+        <div class="wrapper-space">
+            <div class="row-wrapper-space">
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                    <p>历史</p>
+                    <div class="space-item">
+                        <div class="wraper-title">
+                            <h1>1999</h1>
+                            <div class="wraper-title-text">星巴克大陆第一家门店</div>
+                            <img src="/static/img/icon-opennow.png"/>
+                        </div>
+                        <div class="wraper-text">星巴克于1999年1月，在北京中国国际贸易中心开设中国大陆第一家门店。对星巴克来说，中国目前已成为星巴克发展速度最快、最大的海外市场。
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                    <p>门店</p>
+                    <div class="space-item">
+                        <div class="wraper-title">
+                            <h1>3300</h1>
+                            <div class="wraper-title-text">多家门店遍布超过140个城市</div>
+                            <img src="/static/img/icon-pin.png"/>
+                        </div>
+                        <div class="wraper-text">
+                            目前，星巴克已经在中国140多个城市开设了超过3,300家门店，拥有超过45,000名星巴克伙伴。这一独特优势使我们能够在每一天，通过每一家星巴克门店，践行我们的承诺。
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                    <p>社会责任</p>
+                    <div class="space-item">
+                        <div class="wraper-title">
+                            <h1>650,000+</h1>
+                            <div class="wraper-title-text">小时社区服务</div>
+                            <img src="/static/img/icon-history.png"/>
+                        </div>
+                        <div class="wraper-text">
+                            进入中国以来，星巴克始终致力于回馈社会，对于中国社会的发展做出自己的一份贡献，在地方和全国范围内开展企业社会责任项目。自2011年起，星巴克中国的伙伴和志愿者们一共贡献了超过65万小时的社区服务，增进了与社区和顾客的情感联系。
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--使命和价值观-->
+        <div class="scend-wrapper-space">
+            <div class="space-head">
+                <h2 class="gold-text">我们的使命和价值观</h2>
+            </div>
+            <div class="space-content">
+                <div class="left">
+                    <div class="space-left-text1">
+                        激发并孕育人文精神，每人，每杯，每个社区。
+                    </div>
+                    <div class="space-left-text2">
+                        以我们的伙伴、咖啡和顾客为核心，我们努力践行以下价值观：
+                    </div>
+                    <ul>
+                        <li>营造一种温暖而有归属感的文化，欣然接纳和欢迎每一个人。</li>
+                        <li>积极行动，勇于挑战现状，打破陈规，以创新方式实现公司与伙伴的共同成长。</li>
+                        <li>在每个连接彼此的当下，我们专注投入，开诚相见，互尊互敬。</li>
+                        <li>对于每件事，我们都竭尽所能，做到最好，敢于担当。</li>
+                    </ul>
+                </div>
+                <div class="right">
+                    <img class="img-responsive" src="/static/img/starbucksinchina.jpg"/>
+                </div>
+            </div>
+            <div class="button1">
+                <button class="btn btn-default btn-sm">加入我们</button>
+            </div>
+        </div>
+        <!--最新新闻-->
+        <div class="third-wrapper-space">
+            <div class="third-space">
+                <div class="third-title">
+                    <h2 class="gold-text">最新新闻</h2>
+                </div>
+                <div class="third-content">
+                    <div class="content-item">
+                        <div class="item-image1"></div>
+                        <div class="item-all">
+                            <div class="item-title">星巴克中国首家咖啡原产地门店在云南普洱正式开业</div>
+                            <div class="item-texts">首次打造“一颗生豆到一杯咖啡”的原产地咖啡体验。深耕云南六年又一诚意之作，致敬云南咖啡种植者。</div>
+                        </div>
+                    </div>
+                    <div class="content-item">
+                        <div class="item-image2"></div>
+                        <div class="item-all">
+                            <div class="item-title">星巴克®星怡杯™系列冷藏饮品今夏沁鲜上市 星巴克中国首推冷藏即饮饮品，开启沁人心“啡”星体验</div>
+                            <div class="item-texts">2018年6月15日，中国上海——星巴克®星怡杯™冷藏即饮饮品于近日首度登陆中国。
+                                星怡杯™系列传承了星巴克一直以来对咖啡的专业与热忱，将高品质的星巴克咖啡与新鲜牛乳完美配比。
+                            </div>
+                        </div>
+                    </div>
+                    <div class="content-item">
+                        <div class="item-image3"></div>
+                        <div class="item-all">
+                            <div class="item-title">星巴克社交礼品服务“用星说”正式登陆支付宝 进一步提升 “第四空间”体验</div>
+                            <div class="item-texts">2018年6月6日，星巴克独特的社交礼品服务“用星说”继去年首推微信小程序后，即将正式登陆支付宝平台，
+                                以更多贴心功能提升星巴克的第四空间体验。
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="button2">
+                    <button class="btn btn-default btn-sm">所有新闻</button>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+</body>
+</html>

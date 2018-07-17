@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>饮料 | 星巴克</title>
+    <link rel="icon" type="image/png" href="/static/img/favicon-16x16.png" sizes="16x16">
+    <link rel="stylesheet" href="/static/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="/static/css/drink.css"/>
+    <link href="/static/css/head.css" rel="stylesheet">
+    <script src="/static/js/jquery.min.js"></script>
+    <script src="/static/js/bootstrap.min.js"></script>
+    <script src="/static/js/style.js"></script>
+</head>
+<body>
+{#回到顶部#}
+<a href="#" onclick="pageScroll()" id="to-top-btn"></a>
+<div class="head-all">
+    <div class="container">
+        <div class="head">
+            <div class="head-left"><a href="#"><img src="/static/img/logo.png" alt="logo"/></a></div>
+            <span class="head-left-font">Starbucks</span>
+            <div class="nav">
+                <!--导航条-->
+                <ul class="nav-main">
+                    <li><a href="{{ url_for("index") }}">首页</a></li>
+                    <li id="li-1"><a href="{{ url_for("select") }}" style="color: #4cae4c">菜单</a><span></span></li>
+                    <li><a href="{{ url_for("choose") }}">关于星巴克臻选™</a><span></span></li>
+                    <li id="li-2"><a href="{{ url_for("apps_intro1") }}">星巴克移动应用</a><span></span></li>
+                    <li id="li-3"><a href="{{ url_for("starbucks_in_china") }}">关于星巴克</a><span></span></li>
+                </ul>
+                <a style="float: right;font-size: 13px;color: #4cae4c "href="{{ url_for("login") }}">你好，{{ current_user.username }}</a>
+                <!--隐藏盒子-->
+                <div class="box">
+                    <div id="box-1" class="hidden-box hidden-loc-menu">
+                        <ul>
+                            <li><a href="{{ url_for("select") }}">季度精选</a></li>
+                            <li><a href="{{ url_for("drink") }}">饮料</a></li>
+                            <li><a href="{{ url_for("coffee") }}">冰咖啡</a></li>
+                        </ul>
+                    </div>
+                    <div id="box-2" class="hidden-box hidden-loc-phone">
+                        <ul>
+                            <li><a href="{{ url_for("apps_intro1") }}">移动应用</a></li>
+                            <li><a href="{{ url_for("apps_intro") }}">Apple Watch</a></li>
+                        </ul>
+                    </div>
+                    <div id="box-3" class="hidden-box hidden-loc-about">
+                        <ul>
+                            <li><a href="{{ url_for("job_offer") }}">工作机会</a></li>
+                            <li><a href="{{ url_for("enterprise_news") }}">企业新闻</a></li>
+                            <li><a href="{{ url_for("starbucks_in_china") }}">星巴克在中国</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+{#内容#}
+<div class="drink-content">
+    <div class="container">
+        <div class="drink1">
+            <h3>咖啡融合冰淇淋</h3>
+            <ul>
+                <li><a>
+                    <div class="circle"
+                         style="background: url(/static/img/affogato.jpg) no-repeat;background-size: cover;"></div>
+                    <strong>阿馥奇朵™</strong>
+                </a></li>
+                <li style="margin-left: 140px;"><a>
+                    <div class="circle"
+                         style="background: url(/static/img/cold-brew-malt.jpg) no-repeat;background-size: cover;"></div>
+                    <strong>麦芽雪冷萃™</strong>
+                </a></li>
+            </ul>
+            <hr/>
+            <h3>冷萃冰咖啡</h3>
+            <ul>
+                <li><a>
+                    <div class="circle"
+                         style="background: url(/static/img/cold-brew.jpg) no-repeat;background-size: cover;"></div>
+                    <strong>冷萃冰咖啡</strong>
+                </a></li>
+                <li style="margin-left: 140px;"><a>
+                    <div class="circle"
+                         style="background: url(/static/img/vanilla-flavor-sweet-cream-cold-brew.jpg) no-repeat;background-size: cover;"></div>
+                    <strong>香草奶油冷萃冰咖啡</strong>
+                </a></li>
+            </ul>
+            <hr/>
+            <h3>绵云冷萃冰咖啡</h3>
+            <ul>
+                <li><a>
+                    <div class="circle"
+                         style="background: url(/static/img/cold-foam-cold-brew.jpg) no-repeat;background-size: cover;"></div>
+                    <strong>冷萃冰咖啡</strong>
+                </a></li>
+            </ul>
+            <hr/>
+            <h3>手工调制浓缩咖啡</h3>
+            <ul>
+                <li><a>
+                    <div class="circle"
+                         style="background: url(/static/img/caffe-americano.jpg) no-repeat;background-size: cover;"></div>
+                    <strong>美式咖啡(热/冷)</strong>
+                </a></li>
+                <li style="margin-left: 140px;"><a>
+                    <div class="circle"
+                         style="background: url(/static/img/caffe-latte.jpg) no-repeat;background-size: cover;"></div>
+                    <strong>拿铁(热/冷)</strong>
+                </a></li>
+                <li style="margin-left: 140px;"><a>
+                    <div class="circle"
+                         style="background: url(/static/img/caffe-mocha.jpg) no-repeat;background-size: cover;"></div>
+                    <strong>摩卡(热/冷)</strong>
+                </a></li>
+                <li style="margin-left: 140px;"><a>
+                    <div class="circle"
+                         style="background: url(/static/img/cappuccino.jpg) no-repeat;background-size: cover;"></div>
+                    <strong>卡布奇诺(热/冷)</strong>
+                </a></li>
+                <li><a>
+                    <div class="circle"
+                         style="background: url(/static/img/caramel-macchiato.jpg) no-repeat;background-size: cover;"></div>
+                    <strong>焦糖玛琪诺(热/冷)</strong>
+                </a></li>
+                <li style="margin-left: 140px;"><a>
+                    <div class="circle"
+                         style="background: url(/static/img/espresso.jpg) no-repeat;background-size: cover;"></div>
+                    <strong>浓缩咖啡</strong>
+                </a></li>
+                <li style="margin-left: 140px;"><a>
+                    <div class="circle"
+                         style="background: url(/static/img/extra-shot-mocha.jpg) no-repeat;background-size: cover;"></div>
+                    <strong>浓郁咖啡摩卡(热/冷)</strong>
+                </a></li>
+                <li style="margin-left: 140px;"><a>
+                    <div class="circle"
+                         style="background: url(/static/img/flat-white.jpg) no-repeat;background-size: cover;"></div>
+                    <strong>馥芮白™</strong>
+                </a></li>
+                <li><a>
+                    <div class="circle"
+                         style="background: url(/static/img/hazelnut-flavored-latte.jpg) no-repeat;background-size: cover;"></div>
+                    <strong>榛果风味拿铁(热/冷)</strong>
+                </a></li>
+                <li style="margin-left: 140px;"><a>
+                    <div class="circle"
+                         style="background: url(/static/img/vanilla-flavored-latte.jpg) no-repeat;background-size: cover;"></div>
+                    <strong>香草风味拿铁(热/冷)</strong>
+                </a></li>
+            </ul>
+            <hr/>
+            <h3>星冰乐®</h3>
+            <ul>
+                <li><a>
+                    <div class="circle"
+                         style="background: url(/static/img/caramel-espresso-frappuccino.jpg) no-repeat;background-size: cover;"></div>
+                    <strong>焦糖浓缩咖啡星冰乐</strong>
+                </a></li>
+                <li style="margin-left: 140px;"><a>
+                    <div class="circle"
+                         style="background: url(/static/img/espresso-frappuccino.jpg) no-repeat;background-size: cover;"></div>
+                    <strong>浓缩咖啡星冰乐</strong>
+                </a></li>
+                <li style="margin-left: 140px;"><a>
+                    <div class="circle"
+                         style="background: url(/static/img/green-tea-frappuccino.jpg) no-repeat;background-size: cover;"></div>
+                    <strong>抹茶星冰乐</strong>
+                </a></li>
+                <li style="margin-left: 140px;"><a>
+                    <div class="circle"
+                         style="background: url(/static/img/mango-passion-tea.jpg) no-repeat;background-size: cover;"></div>
+                    <strong>芒果西番莲果茶星冰乐</strong>
+                </a></li>
+                <li><a>
+                    <div class="circle"
+                         style="background: url(/static/img/mocha-frappuccino.jpg) no-repeat;background-size: cover;"></div>
+                    <strong>摩卡星冰乐</strong>
+                </a></li>
+                <li style="margin-left: 140px;"><a>
+                    <div class="circle"
+                         style="background: url(/static/img/mocha-java-chip-frappuccino.jpg) no-repeat;background-size: cover;"></div>
+                    <strong>摩卡可可碎片星冰乐</strong>
+                </a></li>
+                <li style="margin-left: 140px;"><a>
+                    <div class="circle"
+                         style="background: url(/static/img/vanilla-flavored-cream-frappuccino-blended-beverage.jpg) no-repeat;background-size: cover;"></div>
+                    <strong>香草风味星冰乐</strong>
+                </a></li>
+            </ul>
+            <hr/>
+            <h3>气致™冷萃咖啡</h3>
+            <ul>
+                <li><a>
+                    <div class="circle"
+                         style="background: url(/static/img/nitro-cold-brew.jpg) no-repeat;background-size: cover;"></div>
+                    <strong>气致™冷萃咖啡</strong>
+                </a></li>
+            </ul>
+            <hr/>
+            <h3>经典巧克力饮品</h3>
+            <ul>
+                <li><a>
+                    <div class="circle"
+                         style="background: url(/static/img/signature-chocolate-beverage.jpg) no-repeat;background-size: cover;"></div>
+                    <strong>经典巧克力饮品(热/冷)</strong>
+                </a></li>
+            </ul>
+            <hr/>
+            <h3>茶瓦纳™</h3>
+            <ul>
+                <li><a>
+                    <div class="circle"
+                         style="background: url(/static/img/black-tea-latte.jpg) no-repeat;background-size: cover;"></div>
+                    <strong>红茶拿铁(热/冷)</strong>
+                </a></li>
+                <li style="margin-left: 140px;"><a>
+                    <div class="circle"
+                         style="background: url(/static/img/green-tea-latte.jpg) no-repeat;background-size: cover;"></div>
+                    <strong>抹茶拿铁(热/冷)</strong>
+                </a></li>
+                <li style="margin-left: 140px;"><a>
+                    <div class="circle"
+                         style="background: url(/static/img/iced-shaken-honey-ruby-grapefruit-black-tea.jpg) no-repeat;background-size: cover;"></div>
+                    <strong>茶瓦纳™ 冰摇柚柚蜂蜜红茶</strong>
+                </a></li>
+                <li style="margin-left: 140px;"><a>
+                    <div class="circle"
+                         style="background: url(/static/img/blackcurrant-raspberry.jpg) no-repeat;background-size: cover;"></div>
+                    <strong>冰摇红莓黑加仑茶</strong>
+                </a></li>
+                <li><a>
+                    <div class="circle"
+                         style="background: url(/static/img/iced-shaken-mango-herbal-juiced-tea.jpg) no-repeat;background-size: cover;"></div>
+                    <strong>冰摇芒果花草茶</strong>
+                </a></li>
+                <li style="margin-left: 140px;"><a>
+                    <div class="circle"
+                         style="background: url(/static/img/iced-shaken-peach-green-tea.jpg) no-repeat;background-size: cover;"></div>
+                    <strong>茶瓦纳™ 冰摇桃桃绿茶/冰摇桃桃乌龙茶</strong>
+                </a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>企业新闻</title>
+    <link rel="icon" type="image/png" href="/static/img/favicon-16x16.png" sizes="16x16">
+    <link rel="stylesheet" href="/static/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="/static/css/enterprise_news.css"/>
+    <link href="/static/css/head.css" rel="stylesheet">
+    <script src="/static/js/jquery.min.js"></script>
+    <script src="/static/js/style.js"></script>
+    <script type="text/javascript" src="/static/js/bootstrap.min.js"></script>
+</head>
+<body>
+<a href="#" onclick="pageScroll()" id="to-top-btn"></a>
+<div class="head-all">
+    <div class="container">
+        <div class="head">
+            <div class="head-left"><a href="#"><img src="/static/img/logo.png" alt="logo"/></a></div>
+            <span class="head-left-font">Starbucks</span>
+            <div class="nav">
+                <!--导航条-->
+                <ul class="nav-main">
+                     <li><a href="{{ url_for("index") }}">首页</a></li>
+                    <li id="li-1"><a href="{{ url_for("select") }}">菜单</a><span></span></li>
+                    <li><a href="{{ url_for("choose") }}">关于星巴克臻选™</a><span></span></li>
+                    <li id="li-2"><a href="{{ url_for("apps_intro1") }}">星巴克移动应用</a><span></span></li>
+                    <li id="li-3"><a href="{{ url_for("starbucks_in_china") }}"
+                                     style="color: #4cae4c">关于星巴克</a><span></span></li>
+                </ul>
+                <a style="float: right;font-size: 13px;color: #4cae4c "href="{{ url_for("login") }}">你好，{{ current_user.username }}</a>
+                <!--隐藏盒子-->
+                <div class="box">
+                    <div id="box-1" class="hidden-box hidden-loc-menu">
+                        <ul>
+                            <li><a href="{{ url_for("select") }}">季度精选</a></li>
+                            <li><a href="{{ url_for("drink") }}">饮料</a></li>
+                            <li><a href="{{ url_for("coffee") }}">冰咖啡</a></li>
+                        </ul>
+                    </div>
+                    <div id="box-2" class="hidden-box hidden-loc-phone">
+                        <ul>
+                            <li><a href="{{ url_for("apps_intro1") }}">移动应用</a></li>
+                            <li><a href="{{ url_for("apps_intro") }}">Apple Watch</a></li>
+                        </ul>
+                    </div>
+                    <div id="box-3" class="hidden-box hidden-loc-about">
+                        <ul>
+                            <li><a href="{{ url_for("job_offer") }}">工作机会</a></li>
+                            <li><a href="{{ url_for("enterprise_news") }}">企业新闻</a></li>
+                            <li><a href="{{ url_for("starbucks_in_china") }}">星巴克在中国</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+<div class="news-header">
+    <div class="news-header-image">
+        <h1 class="news-header-title">
+            企业新闻
+        </h1>
+        <div class="button3">
+            <button class="btn btn-default btn-lg">了解星巴克全球新闻</button>
+        </div>
+    </div>
+</div>
+<div class="all">
+    <div class="news-content">
+        <div class="content-item">
+            <div class="item-image1"></div>
+            <div class="item-all">
+                <div class="item-title">星巴克中国首家咖啡原产地门店在云南普洱正式开业</div>
+                <div class="item-texts">首次打造“一颗生豆到一杯咖啡”的原产地咖啡体验。深耕云南六年又一诚意之作，致敬云南咖啡种植者。</div>
+            </div>
+        </div>
+        <div class="content-item">
+            <div class="item-image2"></div>
+            <div class="item-all">
+                <div class="item-title">星巴克®星怡杯™系列冷藏饮品今夏沁鲜上市 星巴克中国首推冷藏即饮饮品，开启沁人心“啡”星体验</div>
+                <div class="item-texts">2018年6月15日，中国上海——星巴克®星怡杯™冷藏即饮饮品于近日首度登陆中国。
+                    星怡杯™系列传承了星巴克一直以来对咖啡的专业与热忱，将高品质的星巴克咖啡与新鲜牛乳完美配比。
+                </div>
+            </div>
+        </div>
+        <div class="content-item">
+            <div class="item-image3"></div>
+            <div class="item-all">
+                <div class="item-title">星巴克社交礼品服务“用星说”正式登陆支付宝 进一步提升 “第四空间”体验</div>
+                <div class="item-texts">2018年6月6日，星巴克独特的社交礼品服务“用星说”继去年首推微信小程序后，即将正式登陆支付宝平台，
+                    以更多贴心功能提升星巴克的第四空间体验。
+                </div>
+            </div>
+        </div>
+        <div class="content-item">
+            <div class="item-image4"></div>
+            <div class="item-all">
+                <div class="item-title">星巴克首次在中国召开全球投资者交流会 提速在华发展，计划2022年末内地市场门店数量增至6000家</div>
+                <div class="item-texts"> 到2022财年末，星巴克将在中国内地新进入100个城市，覆盖总数达到230个城市，同时，每年新增门店数将提至600家。</div>
+            </div>
+        </div>
+        <div class="content-item">
+            <div class="item-image5"></div>
+            <div class="item-all">
+                <div class="item-title">好意融融咖啡香，星巴克和你一起过星年</div>
+                <div class="item-texts">盛载着满满好意与期待，新的一年已经伴随着零点的钟声如约而至。再过不久，我们还将迎来中国人最为重要的农历新年——春节。
+                    在这充满情意与祝福的节日季里，星巴克诚意奉上三款为中国新年量身定制的特别饮品——核桃曲奇风味拿铁、杏运白巧克力风味摩卡以及桃花满满风味抹茶拿铁，
+                    以吉祥口彩和醇香滋味为中国顾客献上最诚挚的节日问候。
+                </div>
+            </div>
+        </div>
+        <div class="content-item">
+            <div class="item-image6"></div>
+            <div class="item-all">
+                <div class="item-title">星巴克瓶装星冰乐圣诞限量款来袭，用心填满节日星愿</div>
+                <div class="item-texts">冬天悄然而至，空气里的圣诞气息也越来越浓。今年圣诞，星巴克瓶装星冰乐的“星意”祝福也准时报到，为大家诚心奉上季节限量新品——节日曲奇香摩卡星冰乐。</div>
+            </div>
+        </div>
+        <div class="content-item">
+            <div class="item-image7"></div>
+            <div class="item-all">
+                <div class="item-title">星巴克海外首家臻选烘焙工坊在上海盛大开幕 中国首个“咖啡奇幻乐园” 前所未有的全感官体验</div>
+                <div class="item-texts">全新的多感官零售体验： 咖啡烘焙、生产和包装、煮制为一体的沉浸式体验线下及线上AR技术数字体验
+                    的创新融合新鲜烘焙的意大利高端手工烘焙品牌焙意之™（Princi™）亚洲首秀。
+                </div>
+            </div>
+        </div>
+        <div class="content-item">
+            <div class="item-image8"></div>
+            <div class="item-all">
+                <div class="item-title">星巴克开启暖心圣诞 让好意从这里蔓延</div>
+                <div class="item-texts">年底将至，天气渐凉，冬日气氛也在大街小巷一点点蔓延开来。然而对于众多咖啡爱好者和星巴克粉丝来说，每一年星巴克圣诞季的开启才标志着冬日的真正到来。
+                    自1997 年起，圣诞红杯便成为了星巴克的标志之一，每一年圣诞季，都有不同的星巴克圣诞红杯相伴，每一个画面都是满满的圣诞回忆。
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

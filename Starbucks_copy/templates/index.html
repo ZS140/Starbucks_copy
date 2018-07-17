@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="Zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <title>星巴克|用每一杯咖啡传递星巴克独特的咖啡体验</title>
+    <link rel="icon" type="image/png" href="/static/img/favicon-16x16.png" sizes="16x16">
+    <script src="/static/js/jquery.min.js"></script>
+    <link rel="stylesheet" href="/static/css/index.css">
+    <link href="/static/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/static/css/head.css" rel="stylesheet">
+    <script src="/static/js/style.js"></script>
+    <script src="/static/js/bootstrap.min.js"></script>
+</head>
+<body>
+{#回到顶部#}
+<a href="#" onclick="pageScroll()" id="to-top-btn"></a>
+
+{#导航条#}
+<div class="banner">
+    <div class="head-all">
+        <div class="container">
+            <div class="head">
+                <div class="head-left"><a href="#"><img src="/static/img/logo.png" alt="logo"/></a></div>
+                <span class="head-left-font">Starbucks</span>
+                <div class="nav">
+                    <!--导航条-->
+                    <ul class="nav-main">
+                        <li><a href="{{ url_for("index") }}" style="color: #4cae4c">首页</a></li>
+                        <li id="li-1"><a href="{{ url_for("select") }}">菜单</a><span></span></li>
+                        <li><a href="{{ url_for("choose") }}">关于星巴克臻选™</a><span></span></li>
+                        <li id="li-2"><a href="{{ url_for("apps_intro1") }}">星巴克移动应用</a><span></span></li>
+                        <li id="li-3"><a href="{{ url_for("starbucks_in_china") }}">关于星巴克</a><span></span></li>
+
+                    </ul>
+                    <a style="float: right;font-size: 13px;color: #4cae4c "
+                       href="{{ url_for("login") }}">你好，{{ current_user.username }}</a>
+                    <!--隐藏盒子-->
+                    <div class="box">
+                        <div id="box-1" class="hidden-box hidden-loc-menu">
+                            <ul>
+                                <li><a href="{{ url_for("select") }}">季度精选</a></li>
+                                <li><a href="{{ url_for("drink") }}">饮料</a></li>
+                                <li><a href="{{ url_for("coffee") }}">冰咖啡</a></li>
+                            </ul>
+                        </div>
+                        <div id="box-2" class="hidden-box hidden-loc-phone">
+                            <ul>
+                                <li><a href="{{ url_for("apps_intro1") }}">移动应用</a></li>
+                                <li><a href="{{ url_for("apps_intro") }}">Apple Watch</a></li>
+                            </ul>
+                        </div>
+                        <div id="box-3" class="hidden-box hidden-loc-about">
+                            <ul>
+                                <li><a href="{{ url_for("job_offer") }}">工作机会</a></li>
+                                <li><a href="{{ url_for("enterprise_news") }}">企业新闻</a></li>
+                                <li><a href="{{ url_for("starbucks_in_china") }}">星巴克在中国</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    {#    {% extends 'base.html' %}#}
+    <div class="carousel slide" id="myslide">
+        <!--图片和对应标题-->
+        <div class="carousel-inner">
+            <div class="item active">
+                <img src="/static/img/banner1.jpg" alt="星巴克" style="width: 100%;height: 540px;">
+            </div>
+            <div class="item">
+                <img src="/static/img/banner2.jpg" alt="星巴克" style="width: 100%;height: 540px;">
+            </div>
+            <div class="item">
+                <img src="/static/img/banner3.jpg" alt="星巴克" style="width: 100%;height: 540px;">
+            </div>
+            <div class="item">
+                <img src="/static/img/banner4.jpg" alt="星巴克" style="width: 100%;height: 540px;">
+            </div>
+        </div>
+        <!--左右箭头-->
+        <a class="carousel-control left" href="#myslide" data-target="#myslide" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left"></span>
+        </a>
+        <a class="carousel-control right" href="#myslide" data-target="#myslide" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right"></span>
+        </a>
+    </div>
+</div>
+
+{#内容#}
+<div class="container">
+    <section class="promotion">
+        <div class="promotion-full">
+            <a href="#"><img src="/static/img/starbucks-tmall-0611-cn.jpg"></a>
+            <a href="#"><img src="/static/img/starbucks-design-studio-web-china.jpg"></a>
+            <a href="#"><img src="/static/img/homepage-career-cn.jpg"></a>
+        </div>
+
+    </section>
+    <section class="wrapper">
+        <div class="wrapper-content">
+            <div>
+                <h3>星享俱乐部</h3>
+                <p class="light">开启您的星享之旅，星星越多、会员等级越高、好礼越丰富。<a href="#">了解更多></a></p>
+                <p>
+                    <a href="{{ url_for('register') }}" class="button">注册</a>
+                    <a href="{{ url_for('login') }}" class="button">登录</a>
+                </p>
+            </div>
+            <div class="image"><img src="/static/img/logo-msr.svg"></div>
+        </div>
+    </section>
+    <section class="tmall center">
+        <div class="wrapper">
+            <h3 class="wrapper-mobile">星巴克精选</h3>
+            <p class="wrapper-mobile light ">在星巴克天猫旗舰店发现更多咖啡心意</p>
+            <ul class="grid">
+                <li>
+                    <a id="home-tmall-msr" href="#">
+                        <img src="/static/img/tmall-card-01.png">
+                        <p class="title-1"><strong>星享卡</strong></p>
+                        <p class="margin2">开始您的<br>星巴克专属之旅</p>
+                        <p class="caption">了解更多 ›</p>
+                    </a>
+                </li>
+                <li>
+                    <a id="home-tmall-svc" href="#">
+                        <img src="/static/img/tmall-card-02.png">
+                        <p class="title-1"><strong>星礼卡</strong></p>
+                        <p class="margin2">用一份心礼<br>让心意相随</p>
+                        <p class="caption">了解更多 ›</p>
+                    </a>
+                </li>
+                <li>
+                    <a id="home-tmall-drink" href="#">
+                        <img src="/static/img/tmall-eticket.png">
+                        <p class="title-1"><strong>电子产品券</strong></p>
+                        <p class="margin2">心意<br>从这一杯开始</p>
+                        <p class="caption">了解更多 ›</p>
+                    </a>
+                </li>
+                <li>
+                    <a id="home-tmall-coffee" href="#">
+                        <img src="/static/img/tmall-reserve.png">
+                        <p class="title-1"><strong>咖啡生活</strong></p>
+                        <p class="margin2">星巴克<br>用心制作</p>
+                        <p class="caption">了解更多 ›</p>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <section class="coffeeHouse">
+        <div class="wrapper center">
+            <h3 class="wrapper-mobile">1912 派克街 | 咖啡星讲堂</h3>
+            <p class="light wrapper-mobile">了解更多星巴克咖啡文化</p>
+        </div>
+        <div class="scroll-wrapper">
+            <div class="scroll-iters">
+                <a href="#" class="cart">
+                    <div class="cart-img">
+                        <img src="/static/img/coffeehouse-coffee-cultivation-kv.jpg">
+                    </div>
+                    <span class="cart-title">咖啡知识</span>
+                    <strong>咖啡的起源与培植</strong>
+                </a>
+                <a href="#" class="cart">
+                    <div class="cart-img">
+                        <img src="/static/img/coffeehouse-pour-over-kv.jpg">
+                    </div>
+                    <span class="cart-title">咖啡品鉴</span>
+                    <strong>手冲咖啡</strong>
+                </a>
+                <a href="#" class="cart">
+                    <div class="cart-img">
+                        <img src="/static/img/coffeehouse-4-fundamentals-kv.jpg">
+                    </div>
+                    <span class="cart-title">咖啡知识</span>
+                    <strong>咖啡调制</strong>
+                </a>
+
+            </div>
+
+        </div>
+    </section>
+</div>
+</body>
+</html>

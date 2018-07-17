@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>星巴克Apple Watch</title>
+    <link rel="icon" type="image/png" href="/static/img/favicon-16x16.png" sizes="16x16">
+    <link rel="stylesheet" href="/static/css/bootstrap.min.css">
+    <link href="/static/css/head.css" rel="stylesheet">
+    <script src="/static/js/bootstrap.min.js"></script>
+    <script src="/static/js/jquery.min.js"></script>
+    <script src="/static/js/style.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 微软雅黑;
+        }
+
+        #contend {
+            left: auto;
+            padding-bottom: 24px;
+            padding-top: 24px;
+            position: relative;
+            overflow: hidden;
+            background-color: #EBEBEB;
+
+        }
+
+        #apple-watch-button {
+            width: 181px;
+            height: 64px;
+            display: block;
+            background: url(/static/img/udp-ios-cn.png) no-repeat center center;
+            margin: 25px auto;
+            background-size: 181px 64px;
+
+        }
+
+        .apple-watch {
+            background-color: #F7F7F7;
+        }
+
+        .wrapper {
+            box-sizing: border-box;
+            margin-left: auto;
+            margin-right: auto;
+            max-width: 768px;
+            width: 100%;
+            padding-left: 24px;
+            padding-right: 24px;
+
+        }
+
+        .wrapper-1 img {
+            display: block;
+            margin: 24px auto 0 auto;
+            width: 55%;
+            min-width: 288px;
+
+        }
+
+        .wrapper-1 {
+            text-align: center;
+        }
+
+        .wrapper {
+
+            box-sizing: border-box;
+            margin-left: auto;
+            margin-right: auto;
+            max-width: 768px;
+            width: 100%;
+        }
+
+        .wrapper h1 {
+            line-height: 160%;
+            font-family: 微软雅黑;
+        }
+
+        .wrapper p {
+            font-size: 17px;
+        }
+
+        .img-box img {
+            width: 70%;
+            display: block;
+            margin: auto;
+        }
+
+        .hero {
+            background-color: #EBEBEB;
+        }
+
+        .gift-contianer {
+            height: 300px;
+            padding-top: 40px;
+        }
+
+        .gift-contianer div {
+            float: left;
+            width: 50%;
+        }
+
+        .gift-contianer h2 {
+            margin-bottom: 20px;
+        }
+
+        .gift-contianer p {
+            color: #707070;
+            font-size: 17px;
+            line-height: 160%;
+        }
+
+        .gift-contianer .img-box {
+            float: right;
+            width: 40%;
+        }
+
+        .app-intro a, .wrapper-1 a {
+            text-decoration: none;
+            color: #00AF66;
+        }
+
+        .app-intro p {
+            text-align: center;
+            margin: 60px auto -24px auto;
+            padding-bottom: 84px;
+            font-size: 17px;
+            line-height: 160%;
+        }
+
+        .app-intro hr {
+            color: #E0E0E0;
+            height: 1px;
+        }
+    </style>
+</head>
+<body>
+<a href="#" onclick="pageScroll()" id="to-top-btn"></a>
+<div class="head-all">
+    <div class="container">
+        <div class="head">
+            <div class="head-left"><a href="#"><img src="/static/img/logo.png" alt="logo"/></a></div>
+            <span class="head-left-font">Starbucks</span>
+            <div class="nav">
+                <!--导航条-->
+                <ul class="nav-main">
+                    <li><a href="{{ url_for("index") }}">首页</a></li>
+                    <li id="li-1"><a href="{{ url_for("select") }}">菜单</a><span></span></li>
+                    <li><a href="{{ url_for("choose") }}">关于星巴克臻选™</a><span></span></li>
+                    <li id="li-2"><a href="{{ url_for("apps_intro1") }}" style="color: #4cae4c">星巴克移动应用</a><span></span>
+                    </li>
+                    <li id="li-3"><a href="{{ url_for("starbucks_in_china") }}">关于星巴克</a><span></span></li>
+                </ul>
+                <a style="float: right;font-size: 13px;color: #4cae4c "href="{{ url_for("login") }}">你好，{{ current_user.username }}</a>
+                <!--隐藏盒子-->
+                <div class="box">
+                    <div id="box-1" class="hidden-box hidden-loc-menu">
+                        <ul>
+                            <li><a href="{{ url_for("select") }}">季度精选</a></li>
+                            <li><a href="{{ url_for("drink") }}">饮料</a></li>
+                            <li><a href="{{ url_for("coffee") }}">冰咖啡</a></li>
+                        </ul>
+                    </div>
+                    <div id="box-2" class="hidden-box hidden-loc-phone">
+                        <ul>
+                            <li><a href="{{ url_for("apps_intro1") }}">移动应用</a></li>
+                            <li><a href="{{ url_for("apps_intro") }}">Apple Watch</a></li>
+                        </ul>
+                    </div>
+                    <div id="box-3" class="hidden-box hidden-loc-about">
+                        <ul>
+                            <li><a href="{{ url_for("job_offer") }}">工作机会</a></li>
+                            <li><a href="{{ url_for("enterprise_news") }}">企业新闻</a></li>
+                            <li><a href="{{ url_for("starbucks_in_china") }}">星巴克在中国</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<section id="contend">
+    <div class="apple-watch">
+        <section class="hero">
+            <div class="wrapper">
+                <div class="wrapper-1">
+                    <h1>美妙咖啡随时相伴</h1>
+                    <p>您可以在您的Apple Watch上打开星巴克的移动应用,更便捷使用<a href="#">星享卡</a>、和星礼卡和查找附近门店。</p>
+                    <a id="apple-watch-button" href="#"></a>
+                    <img src="/static/img/apple-watch.gif" alt="live-pic">
+                </div>
+            </div>
+        </section>
+        <section class="wrapper">
+            <div class="gift-contianer">
+                <div>
+                    <h2>积星享好礼</h2>
+                    <p>随时关注您的星享俱乐部,扫一扫星享卡累积星星兑换好礼</p>
+                </div>
+                <div class="img-box">
+                    <img src="/static/img/apple-watch-rewards@2x.png" alt="apple-watch">
+                </div>
+            </div>
+            <div class="gift-contianer">
+                <div>
+                    <h2>积星享好礼</h2>
+                    <p>随时关注您的星享俱乐部,扫一扫星享卡累积星星兑换好礼</p>
+                </div>
+                <div class="img-box">
+                    <img src="/static/img/apple-watch-pay@2x.png" alt="apple-watch">
+                </div>
+            </div>
+            <div class="gift-contianer">
+                <div>
+                    <h2>积星享好礼</h2>
+                    <p>随时关注您的星享俱乐部,扫一扫星享卡累积星星兑换好礼</p>
+                </div>
+                <div class="img-box">
+                    <img src="/static/img/apple-watch-stores@2x.png" alt="apple-watch">
+                </div>
+            </div>
+        </section>
+        <section class="app-intro wrapper">
+            <hr>
+            <p>为了能正常使用，请确认您IPhone中的<a href="#">星巴克移动应用版本为4.1.8或以上</a>。苹果公司标志及iPhone是苹果公司在美国及其他国家的注册商标。Apple
+                Watch是苹果公司的注册商标，苹果应用商店是苹果公司的服务商标。 </p>
+        </section>
+    </div>
+</section>
+</body>
+</html>

@@ -1,0 +1,190 @@
+* {
+    padding: 0;
+    margin: 0
+}
+
+/*回到顶部*/
+#to-top-btn {
+    z-index: 2000;
+    width: 40px;
+    height: 40px;
+    position: fixed;
+    left: 50%;
+    bottom: 5%;
+    background: url("../img/top_bg.png") no-repeat left top;
+    margin-left: 605px;
+}
+
+#to-top-btn:hover {
+    background: url("../img/top_bg.png") no-repeat left -40px;
+}
+
+a:hover {
+    text-decoration: none;
+    color: #4cae4c;
+}
+
+a {
+    text-decoration: none;
+    color: #040404;
+}
+
+ul, li, ol {
+    text-decoration: none;
+    list-style: none;
+    display: inline;
+}
+
+/*导航条*/
+.head-all .head-left img {
+    margin-top: -10px;
+    width: 60px;
+    height: 80px;
+}
+
+.head-all {
+    /*position: absolute;*/
+    z-index: 200;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.5);
+    position: fixed;
+}
+
+.head {
+    height: 60px;
+    width: 100%;
+}
+
+.head-left {
+    top: -10px;
+    float: left;
+    width: 60px;
+    height: 60px;
+    overflow: hidden;
+}
+
+.head-left-font {
+    line-height: 60px;
+    font-size: 25px;
+}
+
+.nav {
+    width: 730px;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    font-size: 16px;
+    position: relative;
+    float: right;
+    font-family: "微软雅黑";
+}
+
+.nav-main {
+    width: 100%;
+    height: 100%;
+    list-style-type: none
+}
+
+.nav-main li {
+    color: #333333;
+    padding: 20px 20px;
+    cursor: pointer;
+    position: relative;
+}
+
+.nav-main a:hover:before {
+    content: "";
+    position: absolute;
+    bottom: 15px;
+    width: 80%;
+    height: 1.5px;
+    background: #4cae4c;
+}
+
+.nav-main .li-1:hover .box .hidden-box .hidden-loc-menu {
+    display: block;
+}
+
+.nav-main a:before {
+    background-color: transparent;
+    content: "";
+    position: absolute;
+    bottom: 15px;
+    height: 1.5px;
+    -webkit-transition: .3s all;
+    -o-transition: .3s all;
+    transition: .3s all;
+    width: 0;
+}
+
+/*隐藏盒子设置*/
+.head-all .box {
+    position: relative;
+    top: 0;
+    height: 133px;
+}
+
+div.hidden-box {
+    width: 133px;
+    position: absolute;
+    display: none;
+    background: rgba(255, 255, 255, 0.5);
+}
+
+.hidden-box > ul {
+    list-style-type: none;
+    color: #4cae4c;
+    cursor: pointer;
+    padding-top: 12px;
+    padding-bottom: 15px
+}
+
+.hidden-box > ul li {
+    position: relative;
+    display: block;
+    line-height: 30px;
+    height: 30px;
+    font-weight: 500
+}
+
+.hidden-box a:hover:before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 1px;
+    background: #00684D;
+}
+
+.hidden-box a:before {
+    background-color: transparent;
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 1px;
+    -webkit-transition: .3s all;
+    -o-transition: .3s all;
+    transition: .3s all;
+    width: 0;
+}
+
+/*隐藏盒子位置设置*/
+.hidden-loc-menu {
+    position: absolute;
+    left: 74px
+}
+
+.hidden-loc-phone {
+    position: absolute;
+    right: 238px;
+}
+
+.hidden-loc-about {
+    position: absolute;
+    right: 95px;
+}
+
+
+

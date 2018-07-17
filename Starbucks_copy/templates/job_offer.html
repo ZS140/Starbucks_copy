@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>工作机会</title>
+    <link rel="icon" type="image/png" href="/static/img/favicon-16x16.png" sizes="16x16">
+    <link rel="stylesheet" href="/static/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="/static/css/job_offer.css"/>
+    <link href="/static/css/head.css" rel="stylesheet">
+    <script src="/static/js/jquery.min.js"></script>
+    <script src="/static/js/style.js"></script>
+    <script type="text/javascript" src="/static/js/bootstrap.min.js"></script>
+</head>
+<body>
+<a href="#" onclick="pageScroll()" id="to-top-btn"></a>
+<div class="head-all">
+    <div class="container">
+        <div class="head">
+            <div class="head-left"><a href="#"><img src="/static/img/logo.png" alt="logo"/></a></div>
+            <span class="head-left-font">Starbucks</span>
+            <div class="nav">
+                <!--导航条-->
+                <ul class="nav-main">
+                    <li><a href="{{ url_for("index") }}">首页</a></li>
+                    <li id="li-1"><a href="{{ url_for("select") }}">菜单</a><span></span></li>
+                    <li><a href="{{ url_for("choose") }}">关于星巴克臻选™</a><span></span></li>
+                    <li id="li-2"><a href="{{ url_for("apps_intro1") }}">星巴克移动应用</a><span></span></li>
+                    <li id="li-3"><a href="{{ url_for("starbucks_in_china") }}"
+                                     style="color: #4cae4c">关于星巴克</a><span></span></li>
+                </ul>
+                <a style="float: right;font-size: 13px;color: #4cae4c "href="{{ url_for("login") }}">你好，{{ current_user.username }}</a>
+                <!--隐藏盒子-->
+                <div class="box">
+                    <div id="box-1" class="hidden-box hidden-loc-menu">
+                        <ul>
+                            <li><a href="{{ url_for("select") }}">季度精选</a></li>
+                            <li><a href="{{ url_for("drink") }}">饮料</a></li>
+                            <li><a href="{{ url_for("coffee") }}">冰咖啡</a></li>
+                        </ul>
+                    </div>
+                    <div id="box-2" class="hidden-box hidden-loc-phone">
+                        <ul>
+                            <li><a href="{{ url_for("apps_intro1") }}">移动应用</a></li>
+                            <li><a href="{{ url_for("apps_intro") }}">Apple Watch</a></li>
+                        </ul>
+                    </div>
+                    <div id="box-3" class="hidden-box hidden-loc-about">
+                        <ul>
+                            <li><a href="{{ url_for("job_offer") }}">工作机会</a></li>
+                            <li><a href="{{ url_for("enterprise_news") }}">企业新闻</a></li>
+                            <li><a href="{{ url_for("starbucks_in_china") }}">星巴克在中国</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="job-offer-header">
+        <div class="header-line"></div>
+        <div class="offer-title">有一个机会，成为星巴克伙伴</div>
+        <div class="offer-text1">连接更广阔的世界</div>
+        <div class="offer-text2">加入星巴克大家庭，和我们一起工作，让我们与你一起成长，创造无限可能。在星巴克工作意味着一个获得超越简单雇佣关系的机会，成为我们的伙伴。
+            我们在这里和你一起成长，成为一个更好的人，实现更大的目标，在你面前的正是无限可能。你可以在星巴克实现更多、成就更多，并且成为最好的自己。就在这里认同自己的价值然后去发现一个更大更有意义的世界。
+        </div>
+        <div class="offer-space">
+            <div class="offer-item-left">
+                <div class="space-item">
+                    <div class="item-title1"></div>
+                    <div class="item-text1">零售门店</div>
+                    <div class="button-group1">
+                        <button class="btn btn-default btn-lg">华东区域</button>
+                        <br/>
+                        <button class="btn btn-default btn-lg">其他区域</button>
+                        <br/>
+                        <button class="btn btn-default btn-lg">中国区域</button>
+                    </div>
+                </div>
+            </div>
+            <div class="offer-item-right">
+                <div class="space-item">
+                    <div class="item-title2"></div>
+                    <div class="item-text2">支持中心</div>
+                    <div class="button-group2">
+                        <button class="btn btn-default btn-lg">华东区域</button>
+                        <br/>
+                        <button class="btn btn-default btn-lg">其他区域</button>
+                        <br/>
+                        <button class="btn btn-default btn-lg">中国总部</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="offer-image"></div>
+    </div>
+    <div class="middle-content">
+        <div class="middle-content-title1">关于星巴克</div>
+        <div class="middle-content-text">
+            <div class="middle-left">
+                <div class="left-title1">伙伴文化</div>
+                <div class="left-text1">有一个机会成为星巴克的伙伴</div>
+                <div class="left-title2">我们的使命</div>
+                <div class="left-text2">激发并孕育人文精神——每人、每杯、每个社区</div>
+                <div class="left-title3">伙伴·同行</div>
+                <div class="left-text3">
+                    <ul>
+                        <li>在星巴克，我们称彼此为伙伴，伙伴们一起共享在星巴克的无限机会，伙伴们一起实现更多、成就更多</li>
+                        <li>在星巴克，连接更广阔的世界、做最好的自己、成就非凡事业，让每一天都充满意义地连接彼此、成就自己</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="middle-right">
+                <div class="right-title1">咖啡文化</div>
+                <div class="right-text1">
+                    <ul>
+                        <li>星巴克的咖啡文化不仅是延续传统传播咖啡文化，还传递情感联系</li>
+                        <li>始于对咖啡的热爱，星巴克从西雅图出发到如今遍布世界各地，让更多的人享受到高品质的咖啡</li>
+                        <li>同样始于对咖啡的热爱，星巴克伙伴们从祖国各地汇聚在门店，将这份咖啡之爱传递到更广阔的天地</li>
+                        <li>星巴克提供了诸多机会让伙伴们得以提高咖啡技能，围裙的不同颜色代表从咖啡探索者到咖啡公使的不同咖啡技能等级</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="content-image">
+            <div class="image1"></div>
+            <div class="image2"></div>
+            <div class="image3"></div>
+        </div>
+    </div>
+    <div class="third-part">
+        <div class="part-content">
+            <div class="part-title">选择星巴克</div>
+            <div class="part-left">
+                <div class="part-text">
+                    <h3>雇主赞誉</h3>
+                    <ul>
+                        <li>星巴克不只是一家“咖啡”公司更是一家和“人”有关的公司</li>
+                        <li>星巴克是咖啡知识和专业技能方面的领导者，同样对伙伴的重视星巴克一样走在前列</li>
+                        <li>星巴克重视并认可伙伴们的持续贡献与持续投入，致力于帮助他们实现个人和职业梦想。伙伴们拥有“咖啡豆股票”的权益并享有“助房津贴计划”、“咖啡星享假期”和“父母关爱计划”等福利</li>
+                        <li>
+                            星巴克的努力得到了业界的赞誉与认可，并因此获得多个机构颁发的最佳雇主荣誉（多次被Aon、Universum、LinkedIn等机构评选为中国最佳雇主、中国最具吸引力雇主、中国典范雇主等）
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="part-right"></div>
+        </div>
+    </div>
+    <div class="line2"></div>
+    <div class="forth-part">
+        <div class="forth-conten">
+            <div class="forth-left"></div>
+            <div class="forth-right">
+                <h3>全面薪酬</h3>
+                <div class="forth-text1">我们的伙伴无论全职还是兼职（每周20小时或以上），都可以享受一系列的薪酬福利项目。根据工作职位和个人情况的不同，伙伴的全面薪酬福利包括：</div>
+                <div class="forth-text2">
+                    <div class="text2-left">
+                        <ul>
+                            <li>不断增长的薪资</li>
+                            <li>额外的人寿保险</li>
+                            <li>医疗保险</li>
+                            <li>股票期权（咖啡豆股票)</li>
+                            <li>助房津贴计划</li>
+                        </ul>
+                    </div>
+                    <div class="text2-right">
+                        <ul>
+                            <li>咖啡星享假期</li>
+                            <li>父母关爱计划</li>
+                            <li>管理奖金计划</li>
+                            <li>咖啡饮料伙伴券</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="line1"></div>
+    <div class="fifth-part">
+        <div class="fifth-content">
+            <h3>星巴克大学 | 伙伴们的专属咖啡大学</h3>
+            <div class="fifth-left">
+                <div class="fifth-text1">
+                    <ul>
+                        <li>星巴克中国大学（Starbucks China University）为伙伴们设计了个性化的学习与发展道路</li>
+                        <li>希望通过这些努力，与每一个星巴克伙伴分享每一个机会的乐趣，迎接每一个机会的挑战</li>
+                        <li>作为星巴克伙伴，你可以在SCU选择不同的课程进行学习，打造你在关键领域的专业能力，你的每一次学习都将向你想要的未来更进一步</li>
+                    </ul>
+                </div>
+                <div class="fifth-text2">
+                    <ul>
+                        <li>零售学院</li>
+                        <li>领导力学院</li>
+                        <li>咖啡与文化学院</li>
+                        <li>专业职能学院</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="fifth-right"></div>
+        </div>
+    </div>
+    <div class="sixth-part">
+        <div class="sixth-image">
+            <img src="/static/img/starbucks_recruitment_wechat_qr_code.png"/>
+        </div>
+        <p class="sixth-text">扫描二维码 加入我们</p>
+    </div>
+</div>
+</body>
+</html>

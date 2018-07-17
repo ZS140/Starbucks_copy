@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>冷萃冰咖啡 | 星巴克</title>
+    <link rel="icon" type="image/png" href="/static/img/favicon-16x16.png" sizes="16x16">
+    <link rel="stylesheet" href="/static/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="/static/css/coffee.css"/>
+    <link href="/static/css/head.css" rel="stylesheet">
+    <script src="/static/js/jquery.min.js"></script>
+    <script src="/static/js/bootstrap.min.js"></script>
+    <script src="/static/js/style.js"></script>
+</head>
+<body>
+<a href="#" onclick="pageScroll()" id="to-top-btn"></a>
+<div class="head-all">
+    <div class="container">
+        <div class="head">
+            <div class="head-left"><a href="#"><img src="/static/img/logo.png" alt="logo"/></a></div>
+            <span class="head-left-font">Starbucks</span>
+            <div class="nav">
+                <!--导航条-->
+                <ul class="nav-main">
+                    <li><a href="{{ url_for("index") }}">首页</a></li>
+                    <li id="li-1"><a href="{{ url_for("select") }}" style="color: #4cae4c">菜单</a><span></span></li>
+                    <li><a href="{{ url_for("choose") }}">关于星巴克臻选™</a><span></span></li>
+                    <li id="li-2"><a href="{{ url_for("apps_intro1") }}">星巴克移动应用</a><span></span></li>
+                    <li id="li-3"><a href="{{ url_for("starbucks_in_china") }}">关于星巴克</a><span></span></li>
+                </ul>
+                <a style="float: right;font-size: 13px;color: #4cae4c "href="{{ url_for("login") }}">你好，{{ current_user.username }}</a>
+                <!--隐藏盒子-->
+                <div class="box">
+                    <div id="box-1" class="hidden-box hidden-loc-menu">
+                        <ul>
+                            <li><a href="{{ url_for("select") }}">季度精选</a></li>
+                            <li><a href="{{ url_for("drink") }}">饮料</a></li>
+                            <li><a href="{{ url_for("coffee") }}">冰咖啡</a></li>
+                        </ul>
+                    </div>
+                    <div id="box-2" class="hidden-box hidden-loc-phone">
+                        <ul>
+                            <li><a href="{{ url_for("apps_intro1") }}">移动应用</a></li>
+                            <li><a href="{{ url_for("apps_intro") }}">Apple Watch</a></li>
+                        </ul>
+                    </div>
+                    <div id="box-3" class="hidden-box hidden-loc-about">
+                        <ul>
+                            <li><a href="{{ url_for("job_offer") }}">工作机会</a></li>
+                            <li><a href="{{ url_for("enterprise_news") }}">企业新闻</a></li>
+                            <li><a href="{{ url_for("starbucks_in_china") }}">星巴克在中国</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+    </div>
+</div>
+
+{#内容#}
+<div class="container">
+    <div class="coffee-content">
+        <div class="box1"></div>
+        <div class="box2">
+            <div class="box3">
+                <p style="text-align: center;">
+                    星巴克冷萃冰咖啡，回来了。<br/>
+                    它，倾注了星级咖啡师的咖啡热情与耐心，<br/>
+                    全国门店限量供应中。</p>
+                <img src="/static/img2/smooth.gif" class="gif"/>
+            </div>
+            <div class="box4 png">
+                <img src="/static/img2/1-cn.png"/>
+            </div>
+            <div class="box5">
+                <img class="gif" src="/static/img2/steeping.gif" style="float: left;width: 55%;"/>
+                <p style="float: left;padding: 60px 40px;width: 45%;">
+                    我们用热情与时间，<br/>
+                    静候这一杯冷萃冰咖啡的甘醇与本味。<br/>
+                    咖啡豆在新鲜研磨后，<br/>
+                    我们颠覆以往冰咖啡的萃取方式，<br/>
+                    用冷过滤水在星巴克冷萃专用器具中慢速萃取，<br/>
+                    更好地带出咖啡沁甘顺滑的口感与本味。<br/>
+                </p>
+            </div>
+            <div class="box6 png">
+                <img src="/static/img2/2-cn.png"/>
+            </div>
+            <div class="box7">
+                <p style="float: left;padding: 50px 50px;width: 45%;">
+                    不是所有的咖啡豆都能做星巴克冷萃咖啡。<br/>
+                    西雅图的星巴克咖啡研发团队，<br/>
+                    过数十次不同尝试，<br/>
+                    精心拼配并烘焙出这款专属的冷萃综合咖啡豆<br/>
+                </p>
+                <img class="gif" src="/static/img2/coffee-beans.gif" style="float: left;width: 55%;"/>
+            </div>
+            <div class="box8 png">
+                <img src="/static/img2/3-cn.png"/>
+            </div>
+            <div class="box9">
+                <div class="box10">
+                    <img src="/static/img2/cold-brew.png" style="float: left;"/>
+                    <div class="box11">
+                        <h4 style="color: #B89F7A;">冷萃冰咖啡</h4>
+                            <p>10多个小时的慢速萃取，带出微甜的巧，<br/>
+                                克力般风味，与特别的柑橘般风味，为<br/>你奉上沁甘顺滑的味觉感受。</p>
+                            <button><a href="https://detail.tmall.com/item.htm?id=548683653879"
+                                       target="_blank">前往天猫购买</a></button>
+                    </div>
+                </div>
+                <div class="box12">
+                    <img src="/static/img2/vanilla-cold-brew.png" style="float: left;"/>
+                    <div class="box13">
+                        <h4 style="color: #B89F7A;">轻甜香草风味奶油冷萃冰咖啡</h4>
+                            <p>在冷萃冰咖啡的基础上，添加香草风味<br/>
+                                轻奶油。每份轻奶油都是根据西雅图的<br/>
+                                星巴克咖啡研发团队精心研发的配方新<br/>
+                                鲜手工调制而成， 使用脱脂奶也更符合<br/>
+                                现代人的健康生活理念。</p>
+                            <button><a href="https://detail.tmall.com/item.htm?id=548708314252"
+                                       target="_blank">前往天猫购买</a></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+</body>
+</html>

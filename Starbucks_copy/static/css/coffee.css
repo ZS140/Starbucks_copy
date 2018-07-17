@@ -1,0 +1,95 @@
+.coffee-content .box1 {
+    height: 537px;
+    background: url(../img2/cold-brew-desktop.jpg);
+    background-size: cover;
+}
+
+.coffee-content .box2 {
+    height: 2500px;
+    margin-top: 100px;
+}
+
+.coffee-content .box3 {
+    width: 55%;
+    margin: 0 auto;
+}
+
+.coffee-content .png {
+    clear: both;
+    text-align: center;
+    margin: 40px 0;
+}
+
+.coffee-content .png img {
+    width: 50%;
+}
+
+.coffee-content .box5 {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.coffee-content .box7 {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.coffee-content .box9 {
+    width: 70%;
+    margin: 0 auto;
+}
+
+.coffee-content .box11 {
+    float: left;
+    margin: 70px 50px;
+}
+
+.coffee-content .box12 {
+    clear: both;
+}
+
+.coffee-content .box11 {
+    float: left;
+    margin: 70px 50px;
+}
+
+.coffee-content .box13 {
+    float: left;
+    margin: 70px 50px;
+}
+
+.coffee-content .gif {
+    width: 100%;
+    padding: 40px 0;
+}
+
+.coffee-content p {
+    margin-top: 25px;
+    font-size: 16px;
+    line-height: 25px;
+}
+
+.coffee-content a {
+    font-size: 12px;
+    font-weight: 600;
+    color: #B89F7A;
+}
+
+.coffee-content a:hover {
+    text-decoration: none;
+}
+
+.coffee-content button {
+    border: 2px solid #B89F7A;
+    width: 130px;
+    height: 50px;
+    background: none;
+}
+
+.coffee-content button:hover {
+    background-color: #B89F7A;
+}
+
+.coffee-content button:hover a {
+    color: white;
+}

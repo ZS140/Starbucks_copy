@@ -1,0 +1,455 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.job-offer-header li {
+    text-decoration: none;
+    font-family: "微软雅黑";
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+.container {
+    background-color: #FFF;
+}
+
+.job-offer-header {
+    height: 1006px;
+    background-color: #212121;
+}
+
+.offer-text1 {
+    text-align: center;
+    font-size: 20px;
+    color: #00A862;
+    padding-bottom: 5%;
+}
+
+.offer-text2 {
+    font-size: 20px;
+    margin-left: 10%;
+    width: 80%;
+    color: white;
+    padding-bottom: 5%;
+}
+
+.offer-title {
+    text-align: center;
+    padding-bottom: 5%;
+    font-weight: bold;
+    color: white;
+    font-size: 28px;
+}
+
+.offer-space {
+    width: 80%;
+    margin-left: 10%;
+}
+
+.offer-item-left {
+    width: 49%;
+    float: left;
+}
+
+.offer-item-right {
+    width: 49%;
+    float: right;
+    margin-left: 2%;
+}
+
+.item-title1 {
+    height: 144px;
+    width: 100%;
+    background: url(../img/career-retail.jpg);
+    background-size: cover;
+}
+
+.item-title2 {
+    height: 144px;
+    width: 100%;
+    background: url(../img/career-support-center.jpg);
+    background-size: cover;
+}
+
+.space-item {
+    background-color: white;
+}
+
+.item-text1 {
+    padding-top: 5%;
+    font-weight: bold;
+    font-size: 20px;
+    text-align: center;
+}
+
+.item-text2 {
+    padding-top: 5%;
+    font-weight: bold;
+    font-size: 20px;
+    text-align: center;
+}
+
+.button-group1 button {
+    margin-left: 38%;
+    margin-top: 3%;
+    margin-bottom: 3%;
+    color: white;
+    background-color: #1ab172;
+    border-color: #1ab172;
+    border-radius: 24px;
+}
+
+.button-group1 button:hover {
+    margin-left: 38%;
+    margin-top: 3%;
+    margin-bottom: 3%;
+    color: white;
+    background-color: #00A862;
+    border-color: #00A862;
+    border-radius: 24px;
+}
+
+.button-group2 button {
+    margin-left: 38%;
+    margin-top: 3%;
+    margin-bottom: 3%;
+    color: white;
+    background-color: #1ab172;
+    border-color: #1ab172;
+    border-radius: 24px;
+}
+
+.button-group2 button:hover {
+    margin-left: 38%;
+    margin-top: 3%;
+    margin-bottom: 3%;
+    color: white;
+    background-color: #00A862;
+    border-color: #00A862;
+    border-radius: 24px;
+}
+
+.offer-image {
+    width: 40%;
+    height: 100px;
+    background: url(../img/careers-cup.png) no-repeat;
+    margin-left: 32%;
+    margin-top: 40%;
+}
+
+/*中间的文字*/
+.middle-content {
+    width: 100%;
+    height: 1000px;
+    background-color: #F7F7F7;
+}
+
+.middle-content-title1 {
+    padding: 40px;
+    font-size: 30px;
+    text-align: center;
+}
+
+.middle-content-text {
+    width: 80%;
+    margin-left: 10%;
+}
+
+.middle-left {
+    width: 49%;
+    height: 560px;
+    float: left;
+    margin-bottom: 5%;
+}
+
+.left-title1 {
+    padding: 20px 20px;
+    text-align: center;
+    font-size: 18px;
+    color: #C2A661;
+    font-weight: bold;
+}
+
+.left-text1 {
+    padding: 15px 15px;
+    text-align: center;
+    font-size: 16px;
+}
+
+.left-title2 {
+    padding: 20px 20px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.left-text2 {
+    padding: 15px 15px;
+    text-align: center;
+    font-size: 16px;
+}
+
+.left-title3 {
+    padding: 20px 20px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.left-text3 {
+    margin-left: 10%;
+    width: 86%;
+    padding: 10px 15px;
+    font-size: 16px;
+}
+
+.left-text3 li {
+    list-style: circle;
+}
+
+.right-title1 {
+    padding: 20px 20px;
+    text-align: center;
+    font-size: 18px;
+    color: #C2A661;
+    font-weight: bold;
+}
+
+.right-text1 {
+    margin-left: 10%;
+    width: 84%;
+    padding: 10px 15px;
+    font-size: 16px;
+}
+
+.right-text1 li {
+    margin-top: 8%;
+    list-style: circle;
+}
+
+.middle-right {
+    width: 49%;
+    height: 560px;
+    float: right;
+    margin-bottom: 5%;
+}
+
+.content-image {
+    padding-top: 3%;
+    width: 80%;
+    margin-left: 10%;
+}
+
+.image1 {
+    width: 30%;
+    height: 144px;
+    float: left;
+    background: url(../img/starbucks-store.jpg);
+    background-size: cover;
+}
+
+.image2 {
+    margin-left: 5%;
+    width: 30%;
+    height: 144px;
+    float: left;
+    background: url(../img/starbucks-employee-twins.png);
+    background-size: cover;
+}
+
+.image3 {
+    margin-left: 5%;
+    width: 30%;
+    height: 144px;
+    float: left;
+    background: url(../img/starbucks-wechat-social-gifting.jpg);
+    background-size: cover;
+}
+
+/*第三部分*/
+.third-part {
+    background-color: white;
+    height: 460px;
+}
+
+.part-content {
+    width: 80%;
+    margin-left: 10%;
+}
+
+.part-title {
+    text-align: center;
+    font-size: 30px;
+    padding: 20px 20px;
+}
+
+.part-left {
+    width: 70%;
+    height: 320px;
+    float: left;
+}
+
+.part-text h3 {
+    color: #C2A661;
+}
+
+.part-text li {
+    padding: 5px;
+    width: 80%;
+    margin-left: 5%;
+}
+
+.part-right {
+    background: url(../img/stars.png) no-repeat;
+    background-position: 50% 50%;
+    width: 30%;
+    height: 320px;
+    float: right;
+}
+
+/*第四部分*/
+.forth-part {
+    height: 430px;
+    background-color: #F7F7F7;
+}
+
+.forth-conten {
+    width: 80%;
+    margin-left: 10%;
+}
+
+.forth-left {
+    background: url(../img/star_gold.png) no-repeat;
+    width: 30%;
+    height: 320px;
+    float: left;
+}
+
+.forth-right {
+    width: 70%;
+    float: right;
+}
+
+.forth-right h3 {
+    padding: 15px;
+    color: #C2A661;
+}
+
+.forth-text1 {
+    font-size: 16px;
+    padding: 15px;
+}
+
+.forth-text2 {
+    width: 80%;
+    margin-left: 8%;
+}
+
+.forth-text2 li {
+    list-style: circle;
+}
+
+.text2-left {
+    width: 49%;
+    float: left;
+}
+
+.text2-right {
+    margin-left: 2%;
+    width: 49%;
+    float: right;
+}
+
+/*第五部分*/
+.fifth-part {
+    background-color: #F3F1E7;
+    width: 100%;
+    height: 500px;
+    margin-top: -5%;
+}
+
+.fifth-part h3 {
+    padding-left: 15px;
+    color: #C2A661;
+}
+
+.fifth-content {
+    width: 80%;
+    margin-left: 10%;
+}
+
+.fifth-left {
+    width: 66%;
+    margin-left: 4%;
+    float: left;
+}
+
+.fifth-text1 li {
+    padding-top: 5px;
+}
+
+.fifth-text2 {
+    width: 86%;
+    margin-left: 14%;
+}
+
+.fifth-right {
+    background: url(../img/star_university.png);
+    background-size: cover;
+    width: 29%;
+    height: 450px;
+    float: right;
+}
+
+.fifth-text2 li {
+    padding-top: 5px;
+    list-style: circle;
+}
+
+/*第六部分*/
+.sixth-part {
+    height: 288px;
+    background: url(../img/careers-bg-black.png);
+    background-position: 50% 50%;
+    background-size: cover;
+}
+
+.sixth-image img {
+    width: 156px;
+    height: 156px;
+    float: right;
+    margin-right: 25%;
+    margin-top: 5%;
+}
+
+.sixth-text {
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    float: right;
+    margin-right: -13%;
+    margin-top: 20%;
+}
+
+/*分割线*/
+.line1 {
+    width: 100%;
+    background: url(../img/line1.png);
+    background-size: cover;
+    height: 200px;
+}
+
+.line2 {
+    width: 100%;
+    background: url(../img/line2.png);
+    background-size: cover;
+    height: 200px;
+}
+
+.header-line {
+    background: url(../img/line.png);
+    background-size: cover;
+    width: 400px;
+    height: 100px;
+}

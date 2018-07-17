@@ -1,0 +1,209 @@
+.box1{
+	height: 230px;
+	background: url(../img3/bg-msr-unlogged.png);
+	background-size: cover;
+	padding: 10px 200px;
+}
+.border{
+	box-sizing: border-box;
+	float: left;
+}
+.box2{
+	display: block;
+}
+.box2 button{
+	outline: 0;
+	width: 100px;
+	height: 40px;
+	border: 1px solid #02A963;
+	border-radius: 55px;
+	background: none;
+}
+.box2 p span{
+	color: rgba(0, 0, 0, 0.56);
+	font-size:12px ;
+	font-weight: 200;
+	line-height: 20px;
+}
+.box2 button span{
+	color: #02A963;
+	font-size: 10px;
+}
+.box3{
+	margin-left: 100px;
+	width: 220px;
+	display: block;
+}
+.box3 img{
+	margin-top: 70px;
+	max-width: 100%;
+}
+.box4{
+	text-align: center;
+	padding: 50px;
+}
+.box5{
+	text-align: center;
+	position: relative;
+}
+.box5 .checkbox{
+	position: absolute;
+	display: inline-block;
+	opacity: 0;
+}
+.box5 label:before{
+	border: 1px solid #00A862;
+    border-radius: 8px;
+    content: '';
+    opacity: 1;
+    float: left;
+     width: 25px;
+    height: 25px;
+    margin: -4px 8px 0 0;
+   
+}
+.box5 input[type="checkbox"]:checked+label:before{
+	box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.12);
+}
+.box5 input[type="checkbox"]:checked+label:after{
+	opacity: 1;
+    transform: scale(1);
+}
+.box5 label:after{
+    display: table;
+	width: 25px;
+    height: 25px;
+	border-radius: 7px;
+	top: -4px;
+	position: absolute;
+    background: #00A862 url(../img3/icon-checked.svg) no-repeat center center;
+    clear: both;
+    opacity: 0;
+    content: "";
+}
+.box5 span{
+	font-size: 12px;
+	font-weight: 400;
+	color: rgba(0, 0, 0, 0.56);
+}
+.box5 a{
+	font-size: 12px;
+	color: #02A963;
+}
+.box6{
+	margin: 0 auto;
+	width: 240px;
+	padding: 30px;
+	text-align: center;
+}
+.box6 span{
+	padding-bottom: 10px;
+	font-size: 12px;
+	float: left;
+}
+.box7{
+	clear: both;
+	margin: 10px auto;
+	width: 246px;
+	border: 1px solid #E5E5E5;
+}
+.box7 img{
+	border: 0;
+	width: 120px;
+	height: 40px;
+}
+.box7 input{
+	font-size: 12px;
+	outline: 0;
+	border: none;
+	width: 120px;
+	height: 40px;
+}
+.box8{
+	height: 40px;
+	width: 240px;
+}
+.box8 a{
+	margin-left: 5px;
+	color: #B3B3B3;
+	float: left;
+}
+.box8 button{
+	float: right;
+	outline: 0;
+	border: none;
+	border-radius: 5px;
+	color: white;
+	background: #00A862;
+	width: 100px;
+	height: 36px;
+}
+.box9{
+	clear: both;
+	width: 460px;
+	height: 51px;
+	margin: 0 auto;
+}
+.box9 button{
+	float: right;
+	margin-bottom: 30px;
+	display: block;
+	outline: 0;
+	width: 82px;
+	height: 51px;
+	background: #F7F7F7;
+	color: #999999;
+	border: none;
+	border-radius: 50px;
+	box-shadow: 0px 5px 5px #B0B0B0;
+}
+.box10{
+	clear: both;
+	height: 195px;
+	text-align: center;
+	padding: 40px;
+	background: #F7F7F7;
+}
+.box10 div:nth-child(3) button{
+	outline: 0;
+	width: 100px;
+	height: 40px;
+	border: 1px solid #02A963;
+	border-radius: 55px;
+	background: none;
+	float: left;
+}
+.box10 div:nth-child(3) button span{
+	color: #02A963;
+	font-size: 10px;
+}
+h1 span{
+	font-size: 26px;
+	font-weight: 600;
+}
+.text{
+	margin-top: 20px;
+	width: 460px;
+	font-size: 12px;
+	padding: 10px;
+	border:1px solid #E1E1E1;
+	border-top-width: 0px;
+ 	border-right-width: 0px; 
+	border-bottom-width: 1px;
+ 	border-left-width: 0px;
+}
+.text:focus{
+	outline: none;
+	border-bottom:1px solid #00A862;
+}
+.text:hover{
+	border:1px solid #00A862;
+	border-top-width: 0px;
+ 	border-right-width: 0px; 
+	border-bottom-width: 1px;
+ 	border-left-width: 0px;
+}
+a:hover{
+	text-decoration: none;
+}
+

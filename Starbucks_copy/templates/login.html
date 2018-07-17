@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>星享俱乐部 | 星巴克</title>
+    <link rel="icon" type="image/png" href="/static/img/favicon-16x16.png" sizes="16x16">
+    <link rel="stylesheet" href="/static/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="/static/css/login.css"/>
+    <link rel="stylesheet" href="/static/css3/iconfont.css"/>
+    <link rel="stylesheet" href="/static/css2/iconfont.css"/>
+    <script src="/static/js/bootstrap.min.js"></script>
+</head>
+<body>
+<a href="#" onclick="pageScroll()" id="to-top-btn"></a>
+<div class="container">
+    <div class="box1">
+        <div class="box2 border">
+            <h1><span>星享俱乐部</span></h1>
+            <p><span>加入星享俱乐部，即可在星巴克门店消费时积星星，享好礼！<br/>
+						每累积消费50元可获赠一颗星星。星星越多，会员等级越高，<br/>
+						好礼越丰富！</span></p>
+            <button><span>查看详情</span></button>
+        </div>
+        <div class="box3 border">
+            <img src="/static/img3/card-msr-unlogged.png"/>
+        </div>
+    </div>
+    <div style="height:5px;background: #C2A661;"></div>
+    <form method="post">
+        <div class="box4">
+            <div>
+                <input class="text" type="text" id="username" name="username" placeholder="用户名或者电子邮箱"/>
+
+            </div>
+            <div>
+                <input class="text" type="password" id="password" name="password" placeholder="密码"/>
+            </div>
+        </div>
+        <div class="box5">
+            <input class="checkbox" type="checkbox" id="login"name="rem"/>
+            <!--<span>下次自动登录</span>-->
+            <label for="login"><span>下次自动登录</span></label>
+            <a href="#" style="text-decoration: none;margin-left: 280px;">忘记密码？</a>
+        </div>
+        <div class="box6">
+            <span>请输入下图中的验证码：</span>
+            <div class="box7">
+                <img id="identify" src="{{url_for('static',filename='img/identify.jpg',_t=vall)}}"/>
+                <input type="text" placeholder="请输入验证码"/>
+            </div>
+            <div class="box8">
+                <a class="iconfont icon-i-refresh" title="换一张图片"></a>
+                <a class="iconfont icon-feedback" title="问题反馈"></a>
+                <button>验证</button>
+            </div>
+        </div>
+        <div>
+            <div class="box9">
+                <button type="submit">登录</button>
+            </div>
+        </div>
+    </form>
+    <div class="box10">
+        <div style="width: 460px;margin: 0 auto;">
+            <span style="font-size: 20px;float: left;">加入星享俱乐部</span>
+        </div>
+        <div style="width: 460px;margin: 0 auto;padding: 40px 0;">
+            <span style="font-size: 12px;float: left;">只需几分钟，便可成功注册星享俱乐部帐户，成为“星”会员，立即开启集星之旅。</span>
+        </div>
+        <div style="width: 460px;margin: 0 auto;clear: both;">
+            <a href="{{ url_for('register') }}">
+                <button><span>注册 </span></button>
+            </a>
+        </div>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="Zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <title>季度精选 - 饮品、食物、咖啡豆、杯子、星享卡和礼物 | 星巴克</title>
+    <link rel="icon" type="image/png" href="/static/img/favicon-16x16.png" sizes="16x16">
+    <script src="/static/js/jquery.min.js"></script>
+    <link rel="stylesheet" href="/static/css/select.css">
+    <link href="/static/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/static/css/head.css" rel="stylesheet">
+    <script src="/static/js/bootstrap.min.js"></script>
+    <script src="/static/js/style.js"></script>
+</head>
+<body>
+{#回到顶部#}
+<a href="#" onclick="pageScroll()" id="to-top-btn"></a>
+{#导航条#}
+<div class="banner">
+    <div class="head-all">
+        <div class="container">
+            <div class="head">
+                <div class="head-left"><a href="#"><img src="/static/img/logo.png" alt="logo"/></a></div>
+                <span class="head-left-font">Starbucks</span>
+                <div class="nav">
+                    <!--导航条-->
+                    <ul class="nav-main">
+                        <li><a href="{{ url_for("index") }}">首页</a></li>
+                        <li id="li-1"><a href="{{ url_for("select") }}" style="color: #4cae4c">菜单</a><span></span></li>
+                        <li><a href="{{ url_for("choose") }}">关于星巴克臻选™</a><span></span></li>
+                        <li id="li-2"><a href="{{ url_for("apps_intro1") }}">星巴克移动应用</a><span></span></li>
+                        <li id="li-3"><a href="{{ url_for("starbucks_in_china") }}">关于星巴克</a><span></span></li>
+                    </ul>
+                    <a style="float: right;font-size: 13px;color: #4cae4c "
+                       href="{{ url_for("login") }}">你好，{{ current_user.username }}</a>
+                    <!--隐藏盒子-->
+                    <div class="box">
+                        <div id="box-1" class="hidden-box hidden-loc-menu">
+                            <ul>
+                                <li><a href="{{ url_for("select") }}">季度精选</a></li>
+                                <li><a href="{{ url_for("drink") }}">饮料</a></li>
+                                <li><a href="{{ url_for("coffee") }}">冰咖啡</a></li>
+                            </ul>
+                        </div>
+                        <div id="box-2" class="hidden-box hidden-loc-phone">
+                            <ul>
+                                <li><a href="{{ url_for("apps_intro1") }}">移动应用</a></li>
+                                <li><a href="{{ url_for("apps_intro") }}">Apple Watch</a></li>
+                            </ul>
+                        </div>
+                        <div id="box-3" class="hidden-box hidden-loc-about">
+                            <ul>
+                                <li><a href="{{ url_for("job_offer") }}">工作机会</a></li>
+                                <li><a href="{{ url_for("enterprise_news") }}">企业新闻</a></li>
+                                <li><a href="{{ url_for("starbucks_in_china") }}">星巴克在中国</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{#内容#}
+<img class="banner-img" src="/static/img/banner1.jpg">
+<div class="container">
+    <section class="wrapper">
+        <h2>玩转我的夏天</h2>
+        <p class="text">
+            全新抹茶提拉米苏风味星冰乐，抹茶清香与芝士蛋糕风味融合，清新与香浓间的微妙平衡，让这个夏天多一份惬意感受。桃桃星冰乐挚爱回归，桃子“住进”星冰乐，
+            精选原榨桃果汁和桃果肉果冻，深浅不一的纹理，看上去像一只可口的水蜜桃。
+        </p>
+    </section>
+    <section class="featured-items">
+        <div class="item">
+            <div class="mobile-hidden">
+                <div class="All">
+                    <img src="/static/img/kv-food-new.jpg" class="item-img">
+                    <div class="tag" id="tag">
+                        <div class="tag-wrapper">
+                            <h3 class="tag-title">星冰乐</h3>
+                            <p class="tag-content">
+                                全新抹茶提拉米苏风味星冰乐，抹茶清香与芝士蛋糕风味融合，清新与香浓间的微妙平衡，让这个夏天多一份惬意感受。桃桃星冰乐挚爱回归，桃子“住进”星冰乐，
+                                精选原榨桃果汁和桃果肉果冻，深浅不一的纹理，看上去像一只可口的水蜜桃。</p>
+                            <button type="button" class="tag-button"><a class="go">前往购买</a></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="wrapper">
+                    <h2>星级烘焙系列全新上市</h2>
+                    <p>
+                        灵感源自美国西海岸饮食文化，精选来自世界各地的高品质原料，造型有趣，始于经典又融入现代流行元素，每一款都藏着小转折和小惊喜。气息香醇可人，轻咬一口，满口酥软与幸福感，唤醒夏日的慵懒，给味蕾带来层层惊喜。</p>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <div class="mobile-hidden">
+                <div>
+                    <img src="/static/img/kv-msr.jpg" class="item-img">
+                    <div class="tag">
+                        <div class="tag-wrapper">
+                            <h3 class="tag-title">星冰乐</h3>
+                            <p class="tag-content">
+                                全新抹茶提拉米苏风味星冰乐，抹茶清香与芝士蛋糕风味融合，清新与香浓间的微妙平衡，让这个夏天多一份惬意感受。桃桃星冰乐挚爱回归，桃子“住进”星冰乐，
+                                精选原榨桃果汁和桃果肉果冻，深浅不一的纹理，看上去像一只可口的水蜜桃。</p>
+                            <button type="button" class="tag-button"><a class="go">前往购买</a></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="description text wrapper">
+                    <h2>星享卡玩出别样乐趣</h2>
+                    <p>
+                        “热带丛林星享卡套装”灵感源自咖啡热带种植产地的茂密丛林，卡面以3D效果展示盛夏时节动物们隐藏在丛林中的场景，随卡附赠的高档PU贴纸可贴在手机或衣服上，让夏天更有丛林乐趣。“咖啡起源艺术风星享卡”搭配立体地貌便签，不同的层次巧妙的还原了咖啡种植地地貌，带来别样风情。</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="item">
+            <div class="mobile-hidden">
+                <div>
+                    <img src="/static/img/kv-coffee.jpg" class="item-img">
+                    <div class="tag" id="tag-3">
+                        <div class="tag-wrapper">
+                            <h3 class="tag-title">星冰乐</h3>
+                            <p class="tag-content">
+                                全新抹茶提拉米苏风味星冰乐，抹茶清香与芝士蛋糕风味融合，清新与香浓间的微妙平衡，让这个夏天多一份惬意感受。桃桃星冰乐挚爱回归，桃子“住进”星冰乐，
+                                精选原榨桃果汁和桃果肉果冻，深浅不一的纹理，看上去像一只可口的水蜜桃。</p>
+                            <button type="button" class="tag-button"><a class="go">前往购买</a></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="description text wrapper">
+                    <h2>人气回归，花榭清风综合咖啡豆</h2>
+                    <p>
+                        果汁般的活波口感，这是属于夏天的味道。在创造这款专门制作冰咖啡饮品的咖啡豆时，巧妙的运用星巴克烘焙艺术将咖啡豆烘焙至柔和的焙烤棕色，带给这款咖啡平衡而顺滑的焦糖般风味，以及沁爽宜人的味觉体验。无论是直接饮用或搭配牛奶和糖浆，都同样美味。</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="item">
+            <div class="mobile-hidden">
+                <div>
+                    <img src="/static/img/kv-via.jpg" class="item-img" style="height: 425px">
+                    <div class="tag" id="tag-4">
+                        <div class="tag-wrapper">
+                            <h3 class="tag-title">星冰乐</h3>
+                            <p class="tag-content">
+                                全新抹茶提拉米苏风味星冰乐，抹茶清香与芝士蛋糕风味融合，清新与香浓间的微妙平衡，让这个夏天多一份惬意感受。桃桃星冰乐挚爱回归，桃子“住进”星冰乐，
+                                精选原榨桃果汁和桃果肉果冻，深浅不一的纹理，看上去像一只可口的水蜜桃。</p>
+                            <button type="button" class="tag-button"><a class="go">前往购买</a></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="description text wrapper">
+                    <h2>在家制作你爱的那杯星巴克冷萃冰咖啡</h2>
+                    <p>3分钟准备，静待24小时，就可以在家制作出一杯沁甘顺滑的星巴克冷萃冰咖啡了！“冷萃”是一种以时间替代温度来慢速萃取咖啡的方式，特别能带出咖啡本身的醇度和顺滑的口感。</p>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <div class="mobile-hidden">
+                <div>
+                    <img src="/static/img/fp-reserve.jpg" class="item-img">
+                    <div class="tag" id="tag-5">
+                        <div class="tag-wrapper">
+                            <h3 class="tag-title">星冰乐</h3>
+                            <p class="tag-content">
+                                全新抹茶提拉米苏风味星冰乐，抹茶清香与芝士蛋糕风味融合，清新与香浓间的微妙平衡，让这个夏天多一份惬意感受。桃桃星冰乐挚爱回归，桃子“住进”星冰乐，
+                                精选原榨桃果汁和桃果肉果冻，深浅不一的纹理，看上去像一只可口的水蜜桃。</p>
+                            <button type="button" class="tag-button"><a class="go">前往购买</a></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="description text wrapper">
+                    <h2>夏日臻选新体验</h2>
+                    <p>
+                        产量稀少而珍贵，风味丰富而与众不同，这就是用心呈现的星巴克臻选咖啡。馥郁清新的花香、明快的水果风味、菠萝般的甜感、顺滑的醇度以及可可般的余韵代表了这一季来自于不同地域的臻选咖啡，跟着我们的黑围裙大师，打开夏日臻选之旅。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</div>
+
+
+</body>
+</html>

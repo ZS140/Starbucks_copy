@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>星巴克移动应用</title>
+    <link rel="icon" type="image/png" href="/static/img/favicon-16x16.png" sizes="16x16">
+    <script src="/static/js/bootstrap.min.js"></script>
+    <script src="/static/js/jquery.min.js"></script>
+    <script src="/static/js/jquery-2.js"></script>
+    <script src="/static/js/style.js"></script>
+    <link rel="stylesheet" href="/static/css/head.css">
+    <link rel="stylesheet" href="/static/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/css/iconfont.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            line-height: 160%;
+        }
+
+        a {
+            color: black;
+            text-decoration: none;
+            outline: none;
+        }
+
+        a:hover {
+            color: #4cae4c;
+            text-decoration: none;
+        }
+
+        .white {
+            color: #fff;
+
+        }
+
+        #contend {
+            left: auto;
+            padding-bottom: 24px;
+            padding-top: 24px;
+            position: relative;
+            overflow: hidden;
+            background-color: #EBEBEB;
+
+        }
+
+        #contend .section {
+            padding-bottom: 18px;
+            padding-top: 18px;
+
+        }
+
+        #android a {
+            color: #00AF66;
+            text-decoration: none;
+        }
+
+        #android span {
+            padding: 0 8px;
+        }
+
+        #android h3 {
+            margin-bottom: 25px;
+            font-weight: lighter;
+        }
+
+        #android p {
+            margin-bottom: 20px;
+        }
+
+        .center {
+            text-align: center;
+        }
+
+        .starbucks-mobile-top-bg {
+            background: url(/static/img/starbuck-mobile-background-top.jpg) no-repeat center center;
+            width: 100%;
+            height: 406px;
+            background-position: center;
+            position: absolute;
+            z-index: 0;
+            margin-top: -24px;
+            margin-bottom: 24px;
+
+        }
+
+        .starbucks-mobile-carousel-wrapper {
+            margin-top: 250px;
+        }
+
+        .wrapper {
+            box-sizing: border-box;
+            margin-left: auto;
+            margin-right: auto;
+            max-width: 768px;
+            width: 100%;
+            padding-left: 24px;
+            padding-right: 24px;
+
+        }
+
+        .button-box a {
+            display: block;
+            height: 52px;
+            width: 143px;
+            background-size: 143px 52px;
+            text-decoration: none;
+        }
+
+        .ios-icon {
+            background: url(/static/img/udp-ios-cn.png) no-repeat center center;
+
+        }
+
+        .android-icon {
+            background: url(/static/img/udp-android-cn.png) no-repeat center center;
+        }
+
+        .button {
+            background: none;
+            border: 1px solid #00A862;
+            border-radius: 48px;
+            box-sizing: border-box;
+            color: #00A862;
+            display: inline-block;
+            font-weight: 500;
+            outline: none;
+            overflow: hidden;
+            padding: 6px 18px;
+            position: relative;
+            transition-duration: 0.1s;
+            transition-property: background, border-color, color;
+        }
+
+        .button-box {
+            position: absolute;
+            top: 420px;
+            left: 24px;
+            z-index: 3;
+
+        }
+
+        .table-flex {
+            flex: 2;
+        }
+
+        .intro-app {
+            position: relative;
+            z-index: 10;
+            margin-top: 24px;
+            margin-bottom: 48px;
+        }
+
+        .intro-app h1 {
+            font-size: 30px;
+            font-weight: lighter;
+            line-height: 140%;
+            margin-bottom: 48px;
+        }
+
+        .mobiel-decive video {
+            margin-top: -7px;
+            width: 300px;
+            padding: 45px 16px;
+            z-index: 2;
+
+        }
+
+        .mobiel-decive {
+            position: absolute;
+            top: 0px;
+            right: 0px;
+            width: 300px;
+            z-index: 1;
+            margin: 0 auto;
+            float: right;
+
+        }
+
+        .tablet-text h2 {
+            font-weight: lighter;
+            margin-bottom: 18px;
+        }
+
+        .table-text p {
+            margin-bottom: 24px;
+            max-width: 250px;
+        }
+
+        .hero-intro {
+            position: relative;
+            padding-right: 400px;
+            margin-top: 24px;
+            margin-bottom: 48px;
+        }
+
+        .mobiel-decive img {
+            width: 100%;
+            height: 631px;
+            position: absolute;
+            z-index: -1;
+            left: 0;
+            top: -24px;
+        }
+
+        .bg-1 {
+            position: absolute;
+            bottom: -260%;
+            width: 321px;
+            height: 289px;
+            left: -18%;
+            display: block;
+            z-index: 1;
+
+        }
+
+        .carousel {
+            max-width: 890px;
+            margin: 0 auto;
+            background-image: url(/static/img/index.png);
+            background-repeat: no-repeat;
+            background-position: 50% calc(100% - 100px);
+            background-size: contain;
+            padding-top: 100px;
+            padding-bottom: 120px;
+            margin-top: 200px;
+            margin-bottom: 120px;
+            background-color: #F7F7F7;
+        }
+
+        .icon-box {
+            width: 100%;
+            margin: 0 auto;
+
+        }
+
+        .icon-box img {
+            position: relative;
+            width: 160px;
+            left: 40%
+
+        }
+
+        .icon-box i {
+            position: relative;
+            left: 47%;
+
+        }
+
+        .slick-dots i {
+            color: #8C8C8C;
+            height: 20px;
+        }
+
+        .slick-dots li {
+            float: left;
+            text-align: center;
+            width: 25%;
+            list-style: none;
+            color: #8C8C8C;
+
+        }
+
+        .slick-active .carousel-option:hover p {
+            color: #272822;
+        }
+
+        .slick-active .carousel-option:hover .iconfont {
+            color: #00A862;
+        }
+
+        .slick-dots li:hover {
+            border-bottom: 2px solid #00A862;
+        }
+
+        .carousel ul {
+            border-bottom: 2px solid #8C8C8C;
+            position: relative;
+
+            height: 60px;
+        }
+
+        .carousel-inner {
+            position: relative;
+        }
+
+        .hover1 {
+            border-bottom: 2px solid #00A862;
+        }
+    </style>
+    <script type="text/javascript">
+        $(function () {
+            var $div_li = $(".slick-dots li");
+            $div_li.click(function () {
+                $(this).addClass("hover1")            //当前<li>元素高亮
+                    .siblings().removeClass("hover1");  //去掉其它同辈<li>元素的高亮
+                var index = $div_li.index(this);  // 获取当前点击的<li>元素 在 全部li元素中的索引。
+                console.log(index)
+                $(".carousel-inner> div")   	//选取子节点。不选取子节点的话，会引起错误。如果里面还有div
+                    .eq(index).show()   //显示 <li>元素对应的<div>元素
+                    .siblings().hide(); //隐藏其它几个同辈的<div>元素
+            })
+        })
+    </script>
+</head>
+<body>
+<a href="#" onclick="pageScroll()" id="to-top-btn"></a>
+<div class="head-all">
+    <div class="container">
+        <div class="head">
+            <div class="head-left"><a href="#"><img src="/static/img/logo.png" alt="logo"/></a></div>
+            <span class="head-left-font">Starbucks</span>
+            <div class="nav">
+                <!--导航条-->
+                <ul class="nav-main">
+                  <li><a href="{{ url_for("index") }}" >首页</a></li>
+                        <li id="li-1"><a href="{{ url_for("select") }}">菜单</a><span></span></li>
+                        <li><a href="{{ url_for("choose") }}">关于星巴克臻选™</a><span></span></li>
+                        <li id="li-2"><a href="{{ url_for("apps_intro1") }}"style="color: #4cae4c">星巴克移动应用</a><span></span></li>
+                        <li id="li-3"><a href="{{ url_for("starbucks_in_china") }}">关于星巴克</a><span></span></li>
+                </ul>
+                <a style="float: right;font-size: 13px;color: #4cae4c;margin-top: 20px"href="{{ url_for("login") }}">你好，{{ current_user.username }}</a>
+                <!--隐藏盒子-->
+               <div class="box">
+                        <div id="box-1" class="hidden-box hidden-loc-menu">
+                            <ul>
+                                <li><a href="{{ url_for("select") }}">季度精选</a></li>
+                                <li><a href="{{ url_for("drink") }}">饮料</a></li>
+                                <li><a href="{{ url_for("coffee") }}">冰咖啡</a></li>
+                            </ul>
+                        </div>
+                        <div id="box-2" class="hidden-box hidden-loc-phone">
+                            <ul>
+                                <li><a href="{{ url_for("apps_intro1") }}">移动应用</a></li>
+                                <li><a href="{{ url_for("apps_intro") }}">Apple Watch</a></li>
+                            </ul>
+                        </div>
+                        <div id="box-3" class="hidden-box hidden-loc-about">
+                            <ul>
+                                <li><a href="{{ url_for("job_offer") }}">工作机会</a></li>
+                                <li><a href="{{ url_for("enterprise_news") }}">企业新闻</a></li>
+                                <li><a href="{{ url_for("starbucks_in_china") }}">星巴克在中国</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<section id="contend">
+    <div class="starbucks-mobile-top-bg"></div>
+    <div class="wrapper intro-app">
+
+        <h1 class="white center">开启全新星巴克移动应用体验</h1>
+        <div class="hero-intro">
+            <div class="tablet-text tablet-flex">
+                <h2 class="white padded-t3">开启星巴克移动支付</h2>
+                <p class="white" style="max-width: 250px;">
+                    将星礼卡关联至星享俱乐部帐户， 便可直接从手机进行支付、查看 消费记录及管理卡片。
+                </p>
+            </div>
+            <div class="mobiel-decive">
+                <video src="/static/img/apps-mobile-screens-cn.mp4" controls autoplay></video>
+                <img src="/static/img/apps-mobile-mockup-zh.png" alt="mobiel">
+            </div>
+        </div>
+
+        <div class="button-box">
+            <a href="#" class="ios-icon"></a>
+            <br>
+            <a href="#" class="android-icon"></a>
+        </div>
+        <img class="bg-1" src="/static/img/download-bg.png" alt="bg1">
+    </div>
+    <div class="section starbucks-mobile-carousel-wrapper">
+        <div class="relative">
+            <div class="carousel slide">
+                <ul class="slick-dots" role="tablist">
+                    <li id="slick-slide00" data-slide-to="0" class="active ">
+                        <div class="carousel-option">
+                            <i class="iconfont icon-31huiyuanqia"></i>
+
+                            <p id="app-feature-msr">星享俱乐部</p>
+                        </div>
+                    </li>
+                    <li id="slick-slide00" class="slick-active" data-slide-to="1">
+                        <div class="carousel-option">
+                            <i class="iconfont icon-wujiaoxing"></i>
+
+                            <p id="app-feature-msr">星礼卡</p>
+                        </div>
+                    </li>
+                    <li id="slick-slide00" class="slick-active" data-slide-to="2">
+                        <div class="carousel-option">
+                            <i class="iconfont icon-youjian"></i>
+
+                            <p id="app-feature-msr">查找星门店</p>
+                        </div>
+                    </li>
+                    <li id="slick-slide00" class="slick-active" data-slide-to="3">
+                        <div class="carousel-option">
+                            <i class="iconfont icon-shangpu"></i>
+
+                            <p id="app-feature-msr">了解星信息</p>
+                        </div>
+                    </li>
+                </ul>
+
+                <div class="carousel-inner">
+                    <div class="item active">
+                        <div class="wrapper section">
+                            <h2 class="center">星享俱乐部</h2>
+                            <p class="center">展示我的二维码积星星享好礼，还可随时随地查看星星、好礼和会员等级</p>
+                        </div>
+                        <img src="/static/img/apps-mobile-screens-1.png" alt="First slide">
+                    </div>
+                    <div class="item">
+                        <div class="wrapper section">
+                            <h2 class="center">星礼卡</h2>
+                            <p class="center">在APP中随心挑选和购买电子星礼卡，轻松完成支付，还能随时查看余额、充值和管理卡片</p>
+                        </div>
+                        <img src="/static/img/apps-mobile-screens-2.png" alt="Second slide">
+                    </div>
+                    <div class="item">
+                        <div class="wrapper section">
+                            <h2 class="center">查找新门店</h2>
+                            <p class="center">快速找到离您最近的星巴克门店，了解门店营业时间，并接收门店精确位置</p>
+                        </div>
+                        <img src="/static/img/apps-mobile-screens-3.png" alt="Third slide">
+                    </div>
+                    <div class="item">
+                        <div class="wrapper section">
+                            <h2 class="center">了解星消息</h2>
+                            <p class="center">实时接收星巴克最新的产品及促销信息</p>
+                        </div>
+                        <img src="/static/img/apps-mobile-screens-4.png" alt="Third slide">
+                    </div>
+                </div>
+            </div>
+            <!-- <a class="carousel-control left" href="#myCarousel" data-slide="prev">
+            <span _ngcontent-c3="" aria-hidden="true" class="glyphicon glyphicon-chevron-right">
+            </span></a>
+            <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a> -->
+        </div>
+    </div>
+    <div class="wrapper sowing-map"></div>
+    <div id="android" class="wrapper section">
+        <h3 class="center">星巴克手机应用目前在<a href="#">App Store</a>和以下安卓平台均可下载</h3>
+        <p class="center"><a href="#">应用宝</a><span>|</span><a href="#">小米商店</a><span>|</span><a
+                href="#">360手机助手</a><span>|</span><a href="#">百度手机助手</a><span>|</span><a href="#">魅族</a><span>|</span><a
+                href="#">豌豆荚安装</a><span>|</span><a href="#">安智</a><span>|</span><a href="#">华为手机应用市场</a></p>
+        <div class="icon-box">
+            <img src="/static/img/app_qr_20170209.png" alt="app-icon">
+            <br>
+            <i class="iconfont icon-ios"></i>
+            <i class="iconfont icon-android"></i>
+        </div>
+        <p class="center" style="margin: 30px auto;">如果您有任何问题，请查看常见问题，也可以直接与我们联系</p>
+        <p class="btn-box center">
+            <a href="#" class="button margin-r-3" target="_blank">常见问题</a>
+            <a href="#" class="button margin-r-3" target="_blank">联系我们</a>
+        </p>
+    </div>
+</section>
+</body>
+</html>
