@@ -83,7 +83,6 @@ def load_user(user_id):
     return User.query.get(user_id)
 #首页
 @app.route('/index')
-@login_required
 def index():
     return render_template('index.html')
 #菜单
@@ -160,6 +159,7 @@ def register():
             return redirect(url_for('register'))
     return render_template("register.html")
 
+#用户登出
 @app.route('/',methods=['GET','POST'])
 @login_required
 def logout():
