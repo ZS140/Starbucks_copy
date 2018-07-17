@@ -4,7 +4,7 @@ import datetime
 import numpy
 from PIL import Image, ImageDraw, ImageFont
 from flask import render_template, request, redirect, url_for, Flask
-from flask_login import login_user, LoginManager
+from flask_login import login_user, LoginManager, logout_user, login_required
 from flask_sqlalchemy import SQLAlchemy
 
 app = Flask(__name__)
@@ -52,7 +52,7 @@ except Exception as e:
 
 login_Manager = LoginManager()
 login_Manager.init_app(app)
-login_Manager.login_view = "index"
+login_Manager.login_view = "login"
 login_Manager.anonymous_user = MyAnonymousUser
 
 
@@ -82,7 +82,8 @@ def create_identify():
 def load_user(user_id):
     return User.query.get(user_id)
 #首页
-@app.route('/')
+@app.route('/index')
+@login_required
 def index():
     return render_template('index.html')
 #菜单
@@ -158,6 +159,12 @@ def register():
             print("两次密码不同")
             return redirect(url_for('register'))
     return render_template("register.html")
-if __name__ == '__main__':
 
+@app.route('/',methods=['GET','POST'])
+@login_required
+def logout():
+    logout_user()
+    return redirect(url_for('index'))
+
+if __name__ == '__main__':
     app.run(host="127.0.0.1", port=8090, debug=True)
